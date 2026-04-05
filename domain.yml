@@ -1,0 +1,110 @@
+version: "3.1"
+
+# Intents - Όλες οι κατηγορίες ερωτήσεων
+intents:
+  - greet
+  - goodbye
+  - affirm
+  - deny
+  - help
+  - ask_select
+  - ask_insert
+  - ask_update
+  - ask_delete
+  - ask_where
+  - ask_order_by
+  - ask_like
+  - ask_distinct
+  - ask_join
+  - ask_inner_join
+  - ask_left_join
+  - ask_right_join
+  - ask_group_by
+  - ask_having
+  - ask_count
+  - ask_sum
+  - ask_avg
+  - ask_create_table
+  - ask_primary_key
+  - ask_foreign_key
+  - ask_subquery
+  - ask_view
+  - ask_example
+  - ask_difference
+
+# Responses - Απαντήσεις σε Ελληνικά
+responses:
+  utter_greet:
+    - text: "Γεια σου! Είμαι ο SQL Assistant. Πώς μπορώ να σε βοηθήσω σήμερα;"
+    - text: "Καλώς ήρθες! Ρώτησέ με οτιδήποτε για SQL!"
+    - text: "Γεια! Είμαι εδώ για να σε βοηθήσω με SQL ερωτήσεις!"
+
+  utter_goodbye:
+    - text: "Αντίο! Καλή μελέτη!"
+    - text: "Τα λέμε! Αν χρειαστείς βοήθεια, είμαι εδώ!"
+    - text: "Bye! Καλή επιτυχία με την SQL!"
+
+  utter_help:
+    - text: "Μπορώ να σε βοηθήσω με:\n• Εντολές SQL (SELECT, INSERT, UPDATE, DELETE)\n• JOINs και Subqueries\n• Συναρτήσεις (COUNT, SUM, AVG)\n• Δημιουργία πινάκων\n• Views και πολλά άλλα!\n\nΡώτησέ με οτιδήποτε!"
+
+  utter_ask_select:
+    - text: "Η SELECT είναι η βασική εντολή για ανάκτηση δεδομένων από πίνακες.\n\n**Σύνταξη:**\n```sql\nSELECT πεδία\nFROM πίνακας\nWHERE συνθήκη;\n```\n\n**Παράδειγμα:**\n```sql\nSELECT Name, Population\nFROM City\nWHERE CountryCode = 'GRC';\n```\n\nΑυτό επιστρέφει τα ονόματα και τον πληθυσμό όλων των ελληνικών πόλεων!"
+
+  utter_ask_insert:
+    - text: "Η INSERT προσθέτει νέες εγγραφές σε πίνακα.\n\n**Σύνταξη:**\n```sql\nINSERT INTO πίνακας (πεδία)\nVALUES (τιμές);\n```\n\n**Παράδειγμα:**\n```sql\nINSERT INTO City (Name, CountryCode, Population)\nVALUES ('Λαμία', 'GRC', 52006);\n```"
+
+  utter_ask_update:
+    - text: "Η UPDATE τροποποιεί υπάρχουσες εγγραφές.\n\n**Σύνταξη:**\n```sql\nUPDATE πίνακας\nSET πεδίο = τιμή\nWHERE συνθήκη;\n```\n\n**Παράδειγμα:**\n```sql\nUPDATE City\nSET Population = 53000\nWHERE Name = 'Λαμία';\n```\n\n⚠️ Πάντα χρησιμοποιείς WHERE, αλλιώς αλλάζουν ΟΛΕΣ οι εγγραφές!"
+
+  utter_ask_delete:
+    - text: "Η DELETE διαγράφει εγγραφές από πίνακα.\n\n**Σύνταξη:**\n```sql\nDELETE FROM πίνακας\nWHERE συνθήκη;\n```\n\n**Παράδειγμα:**\n```sql\nDELETE FROM City\nWHERE Population < 1000;\n```\n\n⚠️ Χωρίς WHERE διαγράφονται ΟΛΕΣ οι εγγραφές!"
+
+  utter_ask_where:
+    - text: "Η WHERE φιλτράρει τα αποτελέσματα με συνθήκες.\n\n**Operators:** =, !=, <, >, <=, >=, LIKE, IN, BETWEEN\n\n**Παραδείγματα:**\n```sql\nSELECT * FROM City WHERE Population > 1000000;\nSELECT * FROM City WHERE CountryCode IN ('GRC', 'ITA');\nSELECT * FROM City WHERE Name LIKE 'Α%';\n```"
+
+  utter_ask_join:
+    - text: "Τα JOINs συνδυάζουν δεδομένα από πολλούς πίνακες.\n\n**Τύποι:**\n• INNER JOIN - Κοινές εγγραφές\n• LEFT JOIN - Όλες από αριστερά + κοινές\n• RIGHT JOIN - Όλες από δεξιά + κοινές\n\n**Παράδειγμα:**\n```sql\nSELECT City.Name, Country.Name\nFROM City\nINNER JOIN Country ON City.CountryCode = Country.Code;\n```"
+
+  utter_ask_group_by:
+    - text: "Το GROUP BY ομαδοποιεί εγγραφές και εφαρμόζει συναρτήσεις.\n\n**Σύνταξη:**\n```sql\nSELECT πεδίο, COUNT(*)\nFROM πίνακας\nGROUP BY πεδίο;\n```\n\n**Παράδειγμα:**\n```sql\nSELECT CountryCode, COUNT(*) as TotalCities\nFROM City\nGROUP BY CountryCode;\n```\n\nΑυτό μετράει πόσες πόλεις έχει κάθε χώρα!"
+
+  utter_ask_having:
+    - text: "Το HAVING φιλτράρει ομάδες (μετά το GROUP BY).\n\n**Διαφορά WHERE vs HAVING:**\n• WHERE → φιλτράρει εγγραφές ΠΡΙΝ το GROUP BY\n• HAVING → φιλτράρει ομάδες ΜΕΤΑ το GROUP BY\n\n**Παράδειγμα:**\n```sql\nSELECT CountryCode, COUNT(*) as Total\nFROM City\nGROUP BY CountryCode\nHAVING COUNT(*) > 50;\n```\n\nΕπιστρέφει χώρες με >50 πόλεις!"
+
+  utter_ask_count:
+    - text: "Η COUNT() μετράει εγγραφές.\n\n**Παραδείγματα:**\n```sql\nSELECT COUNT(*) FROM City;  -- Όλες οι εγγραφές\nSELECT COUNT(District) FROM City;  -- Μη-NULL τιμές\nSELECT COUNT(DISTINCT CountryCode) FROM City;  -- Μοναδικές χώρες\n```"
+
+  utter_ask_sum:
+    - text: "Η SUM() αθροίζει τιμές.\n\n**Παράδειγμα:**\n```sql\nSELECT SUM(Population) as TotalPopulation\nFROM City\nWHERE CountryCode = 'GRC';\n```\n\nΥπολογίζει τον συνολικό πληθυσμό Ελλάδας!"
+
+  utter_ask_avg:
+    - text: "Η AVG() υπολογίζει μέσο όρο.\n\n**Παράδειγμα:**\n```sql\nSELECT AVG(Population) as AvgPopulation\nFROM City\nWHERE CountryCode = 'GRC';\n```"
+
+  utter_ask_create_table:
+    - text: "Η CREATE TABLE δημιουργεί νέο πίνακα.\n\n**Σύνταξη:**\n```sql\nCREATE TABLE πίνακας (\n  πεδίο1 τύπος [περιορισμοί],\n  πεδίο2 τύπος,\n  PRIMARY KEY (πεδίο1)\n);\n```\n\n**Παράδειγμα:**\n```sql\nCREATE TABLE Students (\n  StudentID INT PRIMARY KEY,\n  Name VARCHAR(50) NOT NULL,\n  Age INT\n);\n```"
+
+  utter_ask_primary_key:
+    - text: "Το PRIMARY KEY είναι μοναδικό αναγνωριστικό κάθε εγγραφής.\n\n**Χαρακτηριστικά:**\n• Μοναδικό (UNIQUE)\n• Όχι NULL\n• Ένα ανά πίνακα\n\n**Παράδειγμα:**\n```sql\nCREATE TABLE Country (\n  Code CHAR(3) PRIMARY KEY,\n  Name VARCHAR(52)\n);\n```"
+
+  utter_ask_foreign_key:
+    - text: "Το FOREIGN KEY συνδέει δύο πίνακες.\n\n**Παράδειγμα:**\n```sql\nCREATE TABLE City (\n  ID INT PRIMARY KEY,\n  CountryCode CHAR(3),\n  FOREIGN KEY (CountryCode) REFERENCES Country(Code)\n);\n```\n\nΤο CountryCode στον City πρέπει να υπάρχει στον Country!"
+
+  utter_ask_subquery:
+    - text: "Τα Subqueries είναι ερωτήματα μέσα σε ερωτήματα.\n\n**Παράδειγμα:**\n```sql\nSELECT Name\nFROM City\nWHERE Population > (\n  SELECT AVG(Population)\n  FROM City\n);\n```\n\nΕπιστρέφει πόλεις με πληθυσμό πάνω από τον μέσο όρο!"
+
+  utter_ask_view:
+    - text: "Τα VIEWs είναι εικονικοί πίνακες (αποθηκευμένα queries).\n\n**Δημιουργία:**\n```sql\nCREATE VIEW GreekCities AS\nSELECT Name, Population\nFROM City\nWHERE CountryCode = 'GRC';\n```\n\n**Χρήση:**\n```sql\nSELECT * FROM GreekCities;\n```"
+
+  utter_ask_example:
+    - text: "Θέλεις παράδειγμα για κάποια εντολή; Πες μου ποια (π.χ. SELECT, JOIN, GROUP BY)!"
+
+  utter_ask_difference:
+    - text: "Για ποιες εντολές θες να δεις τη διαφορά; (π.χ. WHERE vs HAVING, INNER vs LEFT JOIN)"
+
+  utter_default:
+    - text: "Δεν κατάλαβα τελείως. Μπορείς να το ξαναδιατυπώσεις; Ρώτησέ με για: SELECT, JOIN, GROUP BY, Subqueries, Views κτλ."
+
+# Session Configuration
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true

@@ -1,0 +1,22 @@
+# Rasa Endpoints Configuration
+
+# Action server endpoint (αν χρησιμοποιούμε custom actions)
+# action_endpoint:
+#   url: "http://localhost:5055/webhook"
+
+# Tracker store (αποθήκευση conversation history)
+# tracker_store:
+#   type: sql
+#   dialect: "sqlite"
+#   db: "rasa.db"
+
+# Event broker (για real-time updates)
+# event_broker:
+#   type: sql
+#   dialect: postgresql
+#   host: localhost
+#   port: 5432
+
+# Model server (για loading models)
+# models:
+#   url: http://localhost:5000

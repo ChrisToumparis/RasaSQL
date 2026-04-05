@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="el">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Κεφάλαιο 4: Συνδυαστικές Συναρτήσεις - SQL Learning</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;600&family=Karla:wght@400;700&family=Playfair+Display:wght@700;900&display=swap" rel="stylesheet">
+    <style>
+        .chapter-page {max-width: 900px; margin: 6rem auto 3rem; padding: 0 2rem;}
+        .chapter-header {margin-bottom: 3rem;}
+        .chapter-number {font-family: var(--font-mono); color: var(--primary); font-size: 0.9rem; font-weight: 600; margin-bottom: 0.5rem;}
+        .chapter-title-main {font-family: var(--font-display); font-size: 2.5rem; color: var(--text-primary); margin-bottom: 1rem; line-height: 1.2;}
+        .chapter-intro {font-size: 1.125rem; color: var(--text-secondary); line-height: 1.8; margin-bottom: 2rem;}
+        .chapter-content h2 {font-family: var(--font-display); font-size: 1.75rem; color: var(--text-primary); margin: 2.5rem 0 1rem; padding-bottom: 0.5rem; border-bottom: 2px solid var(--border);}
+        .chapter-content h3 {font-size: 1.25rem; color: var(--text-primary); margin: 2rem 0 1rem; font-weight: 600;}
+        .chapter-content p {line-height: 1.8; margin-bottom: 1.5rem; color: var(--text-secondary);}
+        .code-example {background: var(--bg-dark); color: #e2e8f0; padding: 1.5rem; border-radius: var(--radius-md); margin: 1.5rem 0; overflow-x: auto;}
+        .code-example code {font-family: var(--font-mono); font-size: 0.9rem; line-height: 1.6; white-space: pre;}
+        .info-box {background: var(--primary-light); border-left: 4px solid var(--primary); padding: 1.5rem; margin: 2rem 0; border-radius: var(--radius-sm);}
+        .info-box strong {color: var(--primary); display: block; margin-bottom: 0.5rem;}
+        .chapter-nav {display: flex; justify-content: space-between; margin-top: 4rem; padding-top: 2rem; border-top: 2px solid var(--border);}
+        .nav-button {padding: 1rem 2rem; background: var(--primary); color: white; text-decoration: none; border-radius: var(--radius-md); font-weight: 600; transition: all var(--transition-base);}
+        .nav-button:hover {background: var(--primary-dark); transform: translateY(-2px);}
+    </style>
+</head>
+<body>
+    <nav class="nav">
+        <div class="nav-container">
+            <div class="nav-brand"><span class="nav-icon">{ SQL }</span><span class="nav-title">Εκπαίδευση SQL</span></div>
+            <ul class="nav-menu">
+                <li><a href="index.html" class="nav-link">Αρχική</a></li>
+                <li><a href="index.html#chapters" class="nav-link active">Κεφάλαια</a></li>
+            </ul>
+        </div>
+    </nav>
+    <div class="chapter-page">
+        <div class="chapter-header">
+            <div class="chapter-number">ΚΕΦΑΛΑΙΟ 04</div>
+            <h1 class="chapter-title-main">Συνδυαστικές Συναρτήσεις</h1>
+            <p class="chapter-intro">Συναρτήσεις συγκέντρωσης και ομαδοποίησης δεδομένων</p>
+        </div>
+        <div class="chapter-content">
+            <h2>4.1 COUNT - Καταμέτρηση Εγγραφών</h2>
+            <p>Η συνάρτηση <strong>COUNT()</strong> μετράει τον αριθμό των εγγραφών:</p>
+            <div class="code-example"><code>-- Πλήθος πόλεων
+SELECT COUNT(*) FROM City;
+
+-- Πλήθος μοναδικών χωρών
+SELECT COUNT(DISTINCT CountryCode) FROM City;</code></div>
+            
+            <h2>4.2 SUM και AVG - Άθροισμα & Μέσος Όρος</h2>
+            <div class="code-example"><code>-- Συνολικός πληθυσμός
+SELECT SUM(Population) FROM Country;
+
+-- Μέσος πληθυσμός
+SELECT AVG(Population) FROM Country;</code></div>
+            
+            <h2>4.3 MIN και MAX</h2>
+            <div class="code-example"><code>-- Μικρότερος και μεγαλύτερος πληθυσμός
+SELECT MIN(Population), MAX(Population) FROM City;</code></div>
+            
+            <h2>4.4 GROUP BY - Ομαδοποίηση</h2>
+            <p>Ομαδοποιούμε δεδομένα για στατιστικά ανά κατηγορία:</p>
+            <div class="code-example"><code>-- Πλήθος χωρών ανά ήπειρο
+SELECT Continent, COUNT(*) 
+FROM Country 
+GROUP BY Continent;
+
+-- Μέσος πληθυσμός ανά ήπειρο
+SELECT Continent, AVG(Population)
+FROM Country
+GROUP BY Continent;</code></div>
+            
+            <h2>4.5 HAVING - Φιλτράρισμα Ομάδων</h2>
+            <p>Το <strong>HAVING</strong> λειτουργεί σαν WHERE αλλά για ομάδες:</p>
+            <div class="code-example"><code>-- Ηπείρους με >10 χώρες
+SELECT Continent, COUNT(*)
+FROM Country
+GROUP BY Continent
+HAVING COUNT(*) > 10;</code></div>
+            
+            <div class="info-box">
+                <strong>📊 WHERE vs HAVING</strong>
+                WHERE = φιλτράρει εγγραφές ΠΡΙΝ το GROUP BY<br>
+                HAVING = φιλτράρει ομάδες ΜΕΤΑ το GROUP BY
+            </div>
+        </div>
+        <div class="chapter-nav">
+            <a href="chapter-3.html" class="nav-button">← Προηγούμενο</a>
+            <a href="chapter-5.html" class="nav-button">Επόμενο →</a>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

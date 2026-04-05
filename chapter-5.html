@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="el">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Κεφάλαιο 5: Ορισμός & Διαχείριση - SQL Learning</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;600&family=Karla:wght@400;700&family=Playfair+Display:wght@700;900&display=swap" rel="stylesheet">
+    <style>
+        .chapter-page {max-width: 900px; margin: 6rem auto 3rem; padding: 0 2rem;}
+        .chapter-header {margin-bottom: 3rem;}
+        .chapter-number {font-family: var(--font-mono); color: var(--primary); font-size: 0.9rem; font-weight: 600; margin-bottom: 0.5rem;}
+        .chapter-title-main {font-family: var(--font-display); font-size: 2.5rem; color: var(--text-primary); margin-bottom: 1rem; line-height: 1.2;}
+        .chapter-intro {font-size: 1.125rem; color: var(--text-secondary); line-height: 1.8; margin-bottom: 2rem;}
+        .chapter-content h2 {font-family: var(--font-display); font-size: 1.75rem; color: var(--text-primary); margin: 2.5rem 0 1rem; padding-bottom: 0.5rem; border-bottom: 2px solid var(--border);}
+        .chapter-content p {line-height: 1.8; margin-bottom: 1.5rem; color: var(--text-secondary);}
+        .code-example {background: var(--bg-dark); color: #e2e8f0; padding: 1.5rem; border-radius: var(--radius-md); margin: 1.5rem 0; overflow-x: auto;}
+        .code-example code {font-family: var(--font-mono); font-size: 0.9rem; line-height: 1.6; white-space: pre;}
+        .info-box {background: var(--primary-light); border-left: 4px solid var(--primary); padding: 1.5rem; margin: 2rem 0; border-radius: var(--radius-sm);}
+        .info-box strong {color: var(--primary); display: block; margin-bottom: 0.5rem;}
+        .chapter-nav {display: flex; justify-content: space-between; margin-top: 4rem; padding-top: 2rem; border-top: 2px solid var(--border);}
+        .nav-button {padding: 1rem 2rem; background: var(--primary); color: white; text-decoration: none; border-radius: var(--radius-md); font-weight: 600; transition: all var(--transition-base);}
+        .nav-button:hover {background: var(--primary-dark); transform: translateY(-2px);}
+    </style>
+</head>
+<body>
+    <nav class="nav">
+        <div class="nav-container">
+            <div class="nav-brand"><span class="nav-icon">{ SQL }</span><span class="nav-title">Εκπαίδευση SQL</span></div>
+            <ul class="nav-menu">
+                <li><a href="index.html" class="nav-link">Αρχική</a></li>
+                <li><a href="index.html#chapters" class="nav-link active">Κεφάλαια</a></li>
+            </ul>
+        </div>
+    </nav>
+    <div class="chapter-page">
+        <div class="chapter-header">
+            <div class="chapter-number">ΚΕΦΑΛΑΙΟ 05</div>
+            <h1 class="chapter-title-main">Ορισμός & Διαχείριση Δεδομένων</h1>
+            <p class="chapter-intro">Δημιουργία και διαχείριση βάσεων δεδομένων και πινάκων</p>
+        </div>
+        <div class="chapter-content">
+            <h2>5.1 CREATE DATABASE - Δημιουργία Βάσης</h2>
+            <div class="code-example"><code>CREATE DATABASE mydb;</code></div>
+            
+            <h2>5.2 CREATE TABLE - Δημιουργία Πίνακα</h2>
+            <div class="code-example"><code>CREATE TABLE students (
+    id INT PRIMARY KEY AUTO_INCREMENT,
+    name VARCHAR(50) NOT NULL,
+    age INT,
+    email VARCHAR(100)
+);</code></div>
+            
+            <h2>5.3 PRIMARY KEY - Πρωτεύον Κλειδί</h2>
+            <p>Το <strong>PRIMARY KEY</strong> αναγνωρίζει μοναδικά κάθε εγγραφή:</p>
+            <ul style="line-height: 2; color: var(--text-secondary);">
+                <li>✅ Μοναδική τιμή για κάθε εγγραφή</li>
+                <li>✅ Δεν επιτρέπει NULL</li>
+                <li>✅ Ένα μόνο PRIMARY KEY ανά πίνακα</li>
+            </ul>
+            
+            <h2>5.4 FOREIGN KEY - Ξένο Κλειδί</h2>
+            <div class="code-example"><code>CREATE TABLE grades (
+    id INT PRIMARY KEY,
+    student_id INT,
+    grade FLOAT,
+    FOREIGN KEY (student_id) REFERENCES students(id)
+);</code></div>
+            
+            <div class="info-box">
+                <strong>🔗 Foreign Key</strong>
+                Συνδέει δύο πίνακες και διασφαλίζει την ακεραιότητα των δεδομένων.
+            </div>
+            
+            <h2>5.5 ALTER TABLE - Τροποποίηση Πίνακα</h2>
+            <div class="code-example"><code>-- Προσθήκη πεδίου
+ALTER TABLE students ADD phone VARCHAR(15);
+
+-- Διαγραφή πεδίου
+ALTER TABLE students DROP COLUMN phone;
+
+-- Τροποποίηση πεδίου
+ALTER TABLE students MODIFY age SMALLINT;</code></div>
+            
+            <h2>5.6 DROP TABLE - Διαγραφή Πίνακα</h2>
+            <div class="code-example"><code>DROP TABLE students;</code></div>
+            
+            <div class="info-box">
+                <strong>⚠️ ΠΡΟΣΟΧΗ</strong>
+                Η DROP διαγράφει ΜΟΝΙΜΑ τον πίνακα και όλα τα δεδομένα του!
+            </div>
+        </div>
+        <div class="chapter-nav">
+            <a href="chapter-4.html" class="nav-button">← Προηγούμενο</a>
+            <a href="chapter-6.html" class="nav-button">Επόμενο →</a>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

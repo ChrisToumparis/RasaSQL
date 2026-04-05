@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="el">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Κεφάλαιο 3: Ερωτήματα Επιλογής - SQL Learning</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;600&family=Karla:wght@400;700&family=Playfair+Display:wght@700;900&display=swap" rel="stylesheet">
+    <style>
+        .chapter-page {
+            max-width: 900px;
+            margin: 6rem auto 3rem;
+            padding: 0 2rem;
+        }
+        
+        .chapter-header {
+            margin-bottom: 3rem;
+        }
+        
+        .chapter-number {
+            font-family: var(--font-mono);
+            color: var(--primary);
+            font-size: 0.9rem;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+        }
+        
+        .chapter-title-main {
+            font-family: var(--font-display);
+            font-size: 2.5rem;
+            color: var(--text-primary);
+            margin-bottom: 1rem;
+            line-height: 1.2;
+        }
+        
+        .chapter-intro {
+            font-size: 1.125rem;
+            color: var(--text-secondary);
+            line-height: 1.8;
+            margin-bottom: 2rem;
+        }
+        
+        .chapter-content h2 {
+            font-family: var(--font-display);
+            font-size: 1.75rem;
+            color: var(--text-primary);
+            margin: 2.5rem 0 1rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 2px solid var(--border);
+        }
+        
+        .chapter-content h3 {
+            font-size: 1.25rem;
+            color: var(--text-primary);
+            margin: 2rem 0 1rem;
+            font-weight: 600;
+        }
+        
+        .chapter-content p {
+            line-height: 1.8;
+            margin-bottom: 1.5rem;
+            color: var(--text-secondary);
+        }
+        
+        .table-wrapper {
+            overflow-x: auto;
+            margin: 2rem 0;
+        }
+        
+        .data-table {
+            width: 100%;
+            border-collapse: collapse;
+            background: white;
+            border-radius: var(--radius-md);
+            overflow: hidden;
+            box-shadow: 0 2px 8px var(--shadow);
+        }
+        
+        .data-table thead {
+            background: var(--primary);
+            color: white;
+        }
+        
+        .data-table th,
+        .data-table td {
+            padding: 1rem;
+            text-align: left;
+            border-bottom: 1px solid var(--border);
+        }
+        
+        .data-table th {
+            font-weight: 600;
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+        
+        .data-table tbody tr:hover {
+            background: var(--bg-secondary);
+        }
+        
+        .code-example {
+            background: var(--bg-dark);
+            color: #e2e8f0;
+            padding: 1.5rem;
+            border-radius: var(--radius-md);
+            margin: 1.5rem 0;
+            overflow-x: auto;
+        }
+        
+        .code-example code {
+            font-family: var(--font-mono);
+            font-size: 0.9rem;
+            line-height: 1.6;
+            white-space: pre;
+        }
+        
+        .info-box {
+            background: var(--primary-light);
+            border-left: 4px solid var(--primary);
+            padding: 1.5rem;
+            margin: 2rem 0;
+            border-radius: var(--radius-sm);
+        }
+        
+        .info-box strong {
+            color: var(--primary);
+            display: block;
+            margin-bottom: 0.5rem;
+        }
+        
+        .chapter-nav {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 4rem;
+            padding-top: 2rem;
+            border-top: 2px solid var(--border);
+        }
+        
+        .nav-button {
+            padding: 1rem 2rem;
+            background: var(--primary);
+            color: white;
+            text-decoration: none;
+            border-radius: var(--radius-md);
+            font-weight: 600;
+            transition: all var(--transition-base);
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        
+        .nav-button:hover {
+            background: var(--primary-dark);
+            transform: translateY(-2px);
+        }
+        
+        .nav-button.disabled {
+            background: var(--border);
+            pointer-events: none;
+            color: var(--text-muted);
+        }
+    </style>
+</head>
+<body>
+    <nav class="nav">
+        <div class="nav-container">
+            <div class="nav-brand">
+                <span class="nav-icon">{ SQL }</span>
+                <span class="nav-title">Εκπαίδευση SQL</span>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="index.html" class="nav-link">Αρχική</a></li>
+                <li><a href="index.html#chapters" class="nav-link active">Κεφάλαια</a></li>
+                <li><a href="index.html#examples" class="nav-link">Παραδείγματα</a></li>
+                <li><a href="index.html#about" class="nav-link">Σχετικά</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="chapter-page">
+        <div class="chapter-header">
+            <div class="chapter-number">ΚΕΦΑΛΑΙΟ 03</div>
+            <h1 class="chapter-title-main">Ερωτήματα Επιλογής</h1>
+            <p class="chapter-intro">Χρήση της SELECT για ανάκτηση και φιλτράρισμα δεδομένων</p>
+        </div>
+
+        <div class="chapter-content">
+            
+            <h2>3.1 Η Εντολή SELECT</h2>
+            <p>Η <strong>SELECT</strong> είναι η βασικότερη εντολή της SQL για ανάκτηση δεδομένων.</p>
+            
+            <div class="code-example"><code>-- Επιλογή όλων των πεδίων
+SELECT * FROM City;
+
+-- Επιλογή συγκεκριμένων πεδίων
+SELECT Name, Population FROM City;</code></div>
+            
+            <h2>3.2 WHERE - Φιλτράρισμα Δεδομένων</h2>
+            <p>Η πρόταση WHERE χρησιμοποιείται για φιλτράρισμα εγγραφών:</p>
+            
+            <div class="code-example"><code>SELECT * FROM City 
+WHERE Population > 1000000;</code></div>
+            
+            <h3>Τελεστές Σύγκρισης:</h3>
+            <ul style="line-height: 2; color: var(--text-secondary);">
+                <li><code>=</code> Ίσο</li>
+                <li><code>></code> Μεγαλύτερο</li>
+                <li><code><</code> Μικρότερο</li>
+                <li><code>>=</code> Μεγαλύτερο ή ίσο</li>
+                <li><code><=</code> Μικρότερο ή ίσο</li>
+                <li><code><></code> ή <code>!=</code> Διάφορο</li>
+            </ul>
+            
+            <h2>3.3 ORDER BY - Ταξινόμηση</h2>
+            <div class="code-example"><code>-- Αύξουσα (ASC - default)
+SELECT Name FROM City 
+ORDER BY Population ASC;
+
+-- Φθίνουσα (DESC)
+SELECT Name FROM City 
+ORDER BY Population DESC;</code></div>
+            
+            <h2>3.4 LIKE - Pattern Matching</h2>
+            <p>Για αναζήτηση με μοτίβα χρησιμοποιούμε LIKE:</p>
+            <div class="code-example"><code>-- Πόλεις που αρχίζουν με 'A'
+SELECT Name FROM City 
+WHERE Name LIKE 'A%';
+
+-- Πόλεις που τελειώνουν σε 'ς'
+SELECT Name FROM City 
+WHERE Name LIKE '%ς';
+
+-- Όνομα περιέχει 'θην'
+SELECT Name FROM City 
+WHERE Name LIKE '%θην%';</code></div>
+            
+            <h2>3.5 DISTINCT - Μοναδικές Τιμές</h2>
+            <div class="code-example"><code>-- Όλες οι ηπείρους (χωρίς επαναλήψεις)
+SELECT DISTINCT Continent FROM Country;</code></div>
+            
+            <h2>3.6 LIMIT - Περιορισμός Αποτελεσμάτων</h2>
+            <div class="code-example"><code>-- Μόνο τις 10 πρώτες εγγραφές
+SELECT * FROM City LIMIT 10;
+
+-- Από τη 20η έως τη 30η εγγραφή
+SELECT * FROM City LIMIT 20, 10;</code></div>
+        
+        </div>
+
+        <div class="chapter-nav">
+            <a href="chapter-2.html" class="nav-button">
+                ← Προηγούμενο
+            </a>
+            <a href="chapter-4.html" class="nav-button">
+                Επόμενο →
+            </a>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Εισαγωγή στην SQL</h3>
+                    <p>Υλικό βασισμένο σε σημειώσεις ΔΙΠΑΕ</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Navigation</h4>
+                    <ul>
+                        <li><a href="index.html">Αρχική</a></li>
+                        <li><a href="index.html#chapters">Κεφάλαια</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 SQL Education Platform</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

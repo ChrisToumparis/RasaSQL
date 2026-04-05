@@ -1,0 +1,6 @@
+# Python Dependencies για SQL Learning Platform
+
+# Rasa Open Source
+rasa
+
+# Python 3.8, 3.9, ή 3.10 ΜΟΝΟ (ΟΧΙ 3.11+)

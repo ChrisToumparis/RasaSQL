@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="el">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Εισαγωγή στην SQL - Ασύγχρονη Εκπαίδευση</title>
+    <link rel="stylesheet" href="styles.css?v=2">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;600&family=Karla:wght@400;700&family=Playfair+Display:wght@700;900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="nav">
+        <div class="nav-container">
+            <div class="nav-brand">
+                <span class="nav-icon">{ SQL }</span>
+                <span class="nav-title">Εκπαίδευση SQL</span>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="#home" class="nav-link active">Αρχική</a></li>
+                <li><a href="#chapters" class="nav-link">Κεφάλαια</a></li>
+                <li><a href="#examples" class="nav-link">Παραδείγματα</a></li>
+                <li><a href="#about" class="nav-link">Σχετικά</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="hero-background"></div>
+        <div class="hero-content">
+            <div class="hero-badge">Ασύγχρονη Εκπαίδευση</div>
+            <h1 class="hero-title">
+                Μάθε <span class="highlight">SQL</span><br>
+                με τον δικό σου ρυθμό
+            </h1>
+            <p class="hero-subtitle">
+                Ολοκληρωμένος οδηγός για Structured Query Language με αλληλεπιδραστικά παραδείγματα 
+                και AI βοηθό που απαντά στις ερωτήσεις σου σε πραγματικό χρόνο.
+            </p>
+            <div class="hero-buttons">
+                <a href="#chapters" class="btn btn-primary">Ξεκίνα τη Μάθηση</a>
+                <a href="#chatbot" class="btn btn-secondary">Ρώτησε το AI Βοηθό</a>
+            </div>
+            <div class="hero-stats">
+                <div class="stat">
+                    <span class="stat-number">9</span>
+                    <span class="stat-label">Κεφάλαια</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-number">50+</span>
+                    <span class="stat-label">Παραδείγματα</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-number">24/7</span>
+                    <span class="stat-label">AI Υποστήριξη</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Chapters Section -->
+    <section class="chapters" id="chapters">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Περιεχόμενο Μαθήματος</h2>
+                <p class="section-subtitle">9 κεφάλαια που καλύπτουν όλα τα θεμελιώδη της SQL</p>
+            </div>
+
+            <div class="chapters-grid">
+                <!-- Chapter 1 -->
+                <div class="chapter-card" data-chapter="1">
+                    <div class="chapter-number">01</div>
+                    <h3 class="chapter-title">Εισαγωγή</h3>
+                    <p class="chapter-description">Βασικές έννοιες, περιγραφή βάσης δεδομένων για τα παραδείγματα</p>
+                    <ul class="chapter-topics">
+                        <li>Τι είναι η SQL</li>
+                        <li>Βάση Δεδομένων World</li>
+                        <li>Δομή Πινάκων</li>
+                    </ul>
+                    <a href="chapter-1.html" class="chapter-btn">Μελέτη →</a>
+                </div>
+
+                <!-- Chapter 2 -->
+                <div class="chapter-card" data-chapter="2">
+                    <div class="chapter-number">02</div>
+                    <h3 class="chapter-title">Η SQL και η MySQL</h3>
+                    <p class="chapter-description">Εισαγωγή στη γλώσσα SQL και την υλοποίησή της στη MySQL</p>
+                    <ul class="chapter-topics">
+                        <li>Τι είναι η MySQL</li>
+                        <li>Πίνακες & Τύποι Δεδομένων</li>
+                        <li>Βασικές Εντολές</li>
+                    </ul>
+                    <a href="chapter-2.html" class="chapter-btn">Μελέτη →</a>
+                </div>
+
+                <!-- Chapter 3 -->
+                <div class="chapter-card" data-chapter="3">
+                    <div class="chapter-number">03</div>
+                    <h3 class="chapter-title">Ερωτήματα Επιλογής</h3>
+                    <p class="chapter-description">Χρήση της SELECT για ανάκτηση και φιλτράρισμα δεδομένων</p>
+                    <ul class="chapter-topics">
+                        <li>SELECT & FROM</li>
+                        <li>WHERE, ORDER BY</li>
+                        <li>LIKE, IN, BETWEEN</li>
+                    </ul>
+                    <a href="chapter-3.html" class="chapter-btn">Μελέτη →</a>
+                </div>
+
+                <!-- Chapter 4 -->
+                <div class="chapter-card" data-chapter="4">
+                    <div class="chapter-number">04</div>
+                    <h3 class="chapter-title">Συνδυαστικές Συναρτήσεις</h3>
+                    <p class="chapter-description">Συναρτήσεις συγκέντρωσης και ομαδοποίησης δεδομένων</p>
+                    <ul class="chapter-topics">
+                        <li>SUM, AVG, COUNT</li>
+                        <li>GROUP BY, HAVING</li>
+                        <li>Μαθηματικές Συναρτήσεις</li>
+                    </ul>
+                    <a href="chapter-4.html" class="chapter-btn">Μελέτη →</a>
+                </div>
+
+                <!-- Chapter 5 -->
+                <div class="chapter-card" data-chapter="5">
+                    <div class="chapter-number">05</div>
+                    <h3 class="chapter-title">Ορισμός & Διαχείριση</h3>
+                    <p class="chapter-description">Δημιουργία και διαχείριση βάσεων δεδομένων και πινάκων</p>
+                    <ul class="chapter-topics">
+                        <li>CREATE DATABASE/TABLE</li>
+                        <li>ALTER TABLE</li>
+                        <li>Περιορισμοί & Κλειδιά</li>
+                    </ul>
+                    <a href="chapter-5.html" class="chapter-btn">Μελέτη →</a>
+                </div>
+
+                <!-- Chapter 6 -->
+                <div class="chapter-card" data-chapter="6">
+                    <div class="chapter-number">06</div>
+                    <h3 class="chapter-title">Χειρισμός Δεδομένων</h3>
+                    <p class="chapter-description">Προσθήκη, τροποποίηση και διαγραφή δεδομένων</p>
+                    <ul class="chapter-topics">
+                        <li>INSERT, REPLACE</li>
+                        <li>UPDATE</li>
+                        <li>DELETE</li>
+                    </ul>
+                    <a href="chapter-6.html" class="chapter-btn">Μελέτη →</a>
+                </div>
+
+                <!-- Chapter 7 -->
+                <div class="chapter-card" data-chapter="7">
+                    <div class="chapter-number">07</div>
+                    <h3 class="chapter-title">Ένωση Πινάκων</h3>
+                    <p class="chapter-description">Συνδυασμός δεδομένων από πολλούς πίνακες</p>
+                    <ul class="chapter-topics">
+                        <li>INNER JOIN</li>
+                        <li>LEFT/RIGHT JOIN</li>
+                        <li>Ενημέρωση πολλών πινάκων</li>
+                    </ul>
+                    <a href="chapter-7.html" class="chapter-btn">Μελέτη →</a>
+                </div>
+
+                <!-- Chapter 8 -->
+                <div class="chapter-card" data-chapter="8">
+                    <div class="chapter-number">08</div>
+                    <h3 class="chapter-title">Υποερωτήματα</h3>
+                    <p class="chapter-description">Ερωτήματα μέσα σε ερωτήματα για σύνθετες αναζητήσεις</p>
+                    <ul class="chapter-topics">
+                        <li>Απλά Υποερωτήματα</li>
+                        <li>ANY, ALL, EXISTS</li>
+                        <li>Σχετιζόμενα Υποερωτήματα</li>
+                    </ul>
+                    <a href="chapter-8.html" class="chapter-btn">Μελέτη →</a>
+                </div>
+
+                <!-- Chapter 9 -->
+                <div class="chapter-card" data-chapter="9">
+                    <div class="chapter-number">09</div>
+                    <h3 class="chapter-title">Όψεις (Views)</h3>
+                    <p class="chapter-description">Δημιουργία εικονικών πινάκων για ευκολότερη διαχείριση</p>
+                    <ul class="chapter-topics">
+                        <li>CREATE VIEW</li>
+                        <li>Ενημέρωση Όψεων</li>
+                        <li>ALTER & DROP VIEW</li>
+                    </ul>
+                    <a href="chapter-9.html" class="chapter-btn">Μελέτη →</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Examples Section -->
+    <section class="examples" id="examples">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Διαδραστικά Παραδείγματα</h2>
+                <p class="section-subtitle">Πρακτικά παραδείγματα με τη βάση δεδομένων World</p>
+            </div>
+
+            <div class="examples-grid">
+                <div class="example-card">
+                    <div class="example-header">
+                        <span class="example-badge">SELECT</span>
+                        <h3>Βασική Ανάκτηση Δεδομένων</h3>
+                    </div>
+                    <div class="code-block">
+                        <pre><code>SELECT Name, Population 
+FROM City 
+WHERE CountryCode = 'GRC'
+ORDER BY Population DESC;</code></pre>
+                    </div>
+                    <p class="example-description">Εμφάνιση πόλεων της Ελλάδας ταξινομημένες κατά πληθυσμό</p>
+                </div>
+
+                <div class="example-card">
+                    <div class="example-header">
+                        <span class="example-badge">JOIN</span>
+                        <h3>Ένωση Πινάκων</h3>
+                    </div>
+                    <div class="code-block">
+                        <pre><code>SELECT Country.Name, City.Name
+FROM Country 
+INNER JOIN City 
+ON Country.Code = City.CountryCode
+WHERE Continent = 'Europe';</code></pre>
+                    </div>
+                    <p class="example-description">Συνδυασμός χωρών και πόλεων της Ευρώπης</p>
+                </div>
+
+                <div class="example-card">
+                    <div class="example-header">
+                        <span class="example-badge">GROUP BY</span>
+                        <h3>Ομαδοποίηση & Συνάρτηση</h3>
+                    </div>
+                    <div class="code-block">
+                        <pre><code>SELECT Continent, 
+       COUNT(*) AS Countries,
+       AVG(Population) AS AvgPop
+FROM Country
+GROUP BY Continent;</code></pre>
+                    </div>
+                    <p class="example-description">Στατιστικά ανά ήπειρο</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- AI Assistant Section -->
+    <section class="ai-section" id="chatbot">
+        <div class="container">
+            <div class="ai-content">
+                <div class="ai-info">
+                    <div class="ai-badge">🤖 AI Βοηθός</div>
+                    <h2 class="ai-title">Έχεις απορίες;<br>Ρώτα το Rasa Bot!</h2>
+                    <p class="ai-description">
+                        Ο AI βοηθός μας είναι εκπαιδευμένος σε όλο το υλικό της SQL και μπορεί να απαντήσει 
+                        σε οποιαδήποτε ερώτηση έχεις. Από βασικές έννοιες έως σύνθετα ερωτήματα.
+                    </p>
+                    <ul class="ai-features">
+                        <li>✓ Διαθέσιμο 24/7</li>
+                        <li>✓ Άμεσες απαντήσεις</li>
+                        <li>✓ Εξηγήσεις με παραδείγματα</li>
+                        <li>✓ Υποστήριξη στα Ελληνικά</li>
+                    </ul>
+                    <button class="btn btn-primary" onclick="openChatbot()">Ξεκίνα Συνομιλία</button>
+                </div>
+                <div class="ai-preview">
+                    <div class="chat-window">
+                        <div class="chat-header">
+                            <div class="chat-status">
+                                <span class="status-dot"></span>
+                                <span>SQL Assistant Online</span>
+                            </div>
+                        </div>
+                        <div class="chat-messages">
+                            <div class="message bot">
+                                <div class="message-avatar">🤖</div>
+                                <div class="message-content">
+                                    <p>Γεια σου! Είμαι ο SQL βοηθός σου. Πώς μπορώ να σε βοηθήσω σήμερα;</p>
+                                </div>
+                            </div>
+                            <div class="message user">
+                                <div class="message-content">
+                                    <p>Τι είναι η εντολή SELECT;</p>
+                                </div>
+                            </div>
+                            <div class="message bot">
+                                <div class="message-avatar">🤖</div>
+                                <div class="message-content">
+                                    <p>Η SELECT είναι η βασική εντολή για ανάκτηση δεδομένων από μια βάση. Χρησιμοποιείται για να διαλέξεις ποια πεδία θέλεις να εμφανίσεις από έναν πίνακα.</p>
+                                    <div class="code-snippet">
+                                        <code>SELECT πεδία FROM πίνακας;</code>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about" id="about">
+        <div class="container">
+            <div class="about-content">
+                <div class="about-text">
+                    <h2 class="section-title">Σχετικά με το Μάθημα</h2>
+                    <p>
+                        Αυτό το εκπαιδευτικό υλικό βασίζεται στις σημειώσεις "Εισαγωγή στην SQL" του 
+                        Επικ. Καθ. Ιωάννη Καζανίδη από το Τμήμα Πληροφορικής του Διεθνούς Πανεπιστημίου 
+                        της Ελλάδος (ΔΙΠΑΕ).
+                    </p>
+                    <p>
+                        Η ιστοσελίδα εμπλουτίζεται με τεχνολογία Rasa Open Source 3 που παρέχει 
+                        έναν ευφυή βοηθό για άμεση υποστήριξη σε όλες τις ερωτήσεις σου.
+                    </p>
+                    <div class="about-links">
+                        <a href="https://opensource.rasa.com" target="_blank" class="link-btn">
+                            <span>Rasa Documentation</span>
+                            <span>→</span>
+                        </a>
+                        <a href="#" class="link-btn">
+                            <span>Πτυχιακή Εργασία</span>
+                            <span>→</span>
+                        </a>
+                    </div>
+                </div>
+                <div class="about-image">
+                    <div class="image-placeholder">
+                        <div class="placeholder-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                                <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path>
+                                <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path>
+                            </svg>
+                        </div>
+                        <p>SQL Learning Platform</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Εισαγωγή στην SQL</h3>
+                    <p>Ασύγχρονη εκπαίδευση με AI υποστήριξη</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Περιεχόμενο</h4>
+                    <ul>
+                        <li><a href="#chapters">Κεφάλαια</a></li>
+                        <li><a href="#examples">Παραδείγματα</a></li>
+                        <li><a href="#chatbot">AI Βοηθός</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Πόροι</h4>
+                    <ul>
+                        <li><a href="https://opensource.rasa.com" target="_blank">Rasa Docs</a></li>
+                        <li><a href="#">Βιβλιογραφία</a></li>
+                        <li><a href="#">Επικοινωνία</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 SQL Education Platform. Υλικό βασισμένο σε σημειώσεις ΔΙΠΑΕ.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Floating Chat Button -->
+    <button class="floating-chat-btn" onclick="toggleChat()" title="Ρώτησε το SQL Assistant">
+        <svg class="chat-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+            <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
+        </svg>
+        <span class="chat-badge">AI</span>
+    </button>
+
+    <!-- Chat Widget (Hidden by default) -->
+    <div class="chat-widget" id="chatWidget">
+        <div class="chat-widget-header">
+            <div class="chat-widget-title">
+                <span class="chat-widget-icon">🤖</span>
+                <div>
+                    <h3>SQL Assistant</h3>
+                    <span class="chat-widget-status">Online</span>
+                </div>
+            </div>
+            <button class="chat-close-btn" onclick="toggleChat()">×</button>
+        </div>
+        <div class="chat-widget-body" id="chatBody">
+            <div class="chat-widget-message bot">
+                <div class="message-avatar">🤖</div>
+                <div class="message-content">
+                    <p>Γεια σου! Ρώτησέ με οτιδήποτε για την SQL!</p>
+                </div>
+            </div>
+        </div>
+        <div class="chat-widget-input">
+            <input type="text" id="chatInput" placeholder="Γράψε την ερώτησή σου..." />
+            <button onclick="sendMessage()">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                    <path d="M22 2L11 13"></path>
+                    <path d="M22 2L15 22L11 13L2 9L22 2Z"></path>
+                </svg>
+            </button>
+        </div>
+    </div>
+
+    <script src="script.js?v=2"></script>
+</body>
+</html>

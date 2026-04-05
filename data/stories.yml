@@ -1,0 +1,94 @@
+version: "3.1"
+
+stories:
+- story: greet and help
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: help
+  - action: utter_help
+
+- story: ask about select
+  steps:
+  - intent: ask_select
+  - action: utter_ask_select
+
+- story: ask about insert
+  steps:
+  - intent: ask_insert
+  - action: utter_ask_insert
+
+- story: ask about update
+  steps:
+  - intent: ask_update
+  - action: utter_ask_update
+
+- story: ask about delete
+  steps:
+  - intent: ask_delete
+  - action: utter_ask_delete
+
+- story: ask about where
+  steps:
+  - intent: ask_where
+  - action: utter_ask_where
+
+- story: ask about join
+  steps:
+  - intent: ask_join
+  - action: utter_ask_join
+
+- story: ask about group by
+  steps:
+  - intent: ask_group_by
+  - action: utter_ask_group_by
+
+- story: ask about having
+  steps:
+  - intent: ask_having
+  - action: utter_ask_having
+
+- story: ask about count
+  steps:
+  - intent: ask_count
+  - action: utter_ask_count
+
+- story: ask about sum
+  steps:
+  - intent: ask_sum
+  - action: utter_ask_sum
+
+- story: ask about avg
+  steps:
+  - intent: ask_avg
+  - action: utter_ask_avg
+
+- story: ask about create table
+  steps:
+  - intent: ask_create_table
+  - action: utter_ask_create_table
+
+- story: ask about primary key
+  steps:
+  - intent: ask_primary_key
+  - action: utter_ask_primary_key
+
+- story: ask about foreign key
+  steps:
+  - intent: ask_foreign_key
+  - action: utter_ask_foreign_key
+
+- story: ask about subquery
+  steps:
+  - intent: ask_subquery
+  - action: utter_ask_subquery
+
+- story: ask about view
+  steps:
+  - intent: ask_view
+  - action: utter_ask_view
+
+- story: goodbye
+  steps:
+  - intent: goodbye
+  - action: utter_goodbye

@@ -1,0 +1,276 @@
+version: "3.1"
+
+nlu:
+- intent: greet
+  examples: |
+    - γεια
+    - γεια σου
+    - καλημέρα
+    - καλησπέρα
+    - χαίρετε
+    - hi
+    - hello
+    - hey
+    - γειά σου bot
+    - τι κάνεις
+    - ξεκινάμε
+
+- intent: goodbye
+  examples: |
+    - αντίο
+    - τα λέμε
+    - bye
+    - goodbye
+    - see you
+    - φεύγω
+    - ευχαριστώ αντίο
+    - τέλος
+    - κλείσιμο
+
+- intent: help
+  examples: |
+    - βοήθεια
+    - τι μπορείς να κάνεις
+    - πως δουλεύεις
+    - τι μπορώ να ρωτήσω
+    - help
+    - με τι μπορείς να βοηθήσεις
+    - τι ξέρεις
+    - δείξε μου τι μπορείς
+    - οδηγίες
+    - εντολές
+
+- intent: ask_select
+  examples: |
+    - τι είναι η select
+    - πως κάνω select
+    - εξήγησε μου την select
+    - select εντολή
+    - χρήση select
+    - σύνταξη select
+    - παράδειγμα select
+    - πως ανακτώ δεδομένα
+    - πως διαβάζω από πίνακα
+    - query για ανάκτηση
+    - δείξε μου select
+    - select statement
+    - πες μου για select
+    - select από πίνακα
+    - πως κάνω ερώτημα
+
+- intent: ask_insert
+  examples: |
+    - τι είναι η insert
+    - πως προσθέτω δεδομένα
+    - insert εντολή
+    - παράδειγμα insert
+    - πως βάζω νέα εγγραφή
+    - προσθήκη δεδομένων
+    - insert into
+    - δημιουργία εγγραφής
+    - πως κάνω insert
+    - εξήγησε insert
+    - σύνταξη insert
+    - insert values
+
+- intent: ask_update
+  examples: |
+    - τι είναι η update
+    - πως αλλάζω δεδομένα
+    - update εντολή
+    - τροποποίηση εγγραφών
+    - πως κάνω update
+    - παράδειγμα update
+    - αλλαγή τιμών
+    - ενημέρωση πίνακα
+    - update set
+    - εξήγησε update
+    - σύνταξη update
+
+- intent: ask_delete
+  examples: |
+    - τι είναι η delete
+    - πως διαγράφω
+    - delete εντολή
+    - διαγραφή εγγραφών
+    - πως κάνω delete
+    - παράδειγμα delete
+    - αφαίρεση δεδομένων
+    - delete from
+    - εξήγησε delete
+    - σύνταξη delete
+
+- intent: ask_where
+  examples: |
+    - τι είναι η where
+    - πως φιλτράρω
+    - where clause
+    - συνθήκες
+    - παράδειγμα where
+    - where εντολή
+    - πως βάζω φίλτρα
+    - συνθήκη επιλογής
+    - φιλτράρισμα
+    - where condition
+    - εξήγησε where
+
+- intent: ask_order_by
+  examples: |
+    - τι είναι το order by
+    - πως ταξινομώ
+    - order by εντολή
+    - ταξινόμηση
+    - παράδειγμα order by
+    - sorting
+    - desc asc
+    - φθίνουσα αύξουσα
+    - πως κάνω sort
+    - εξήγησε order by
+
+- intent: ask_join
+  examples: |
+    - τι είναι το join
+    - πως κάνω join
+    - join εντολή
+    - συνδυασμός πινάκων
+    - παράδειγμα join
+    - inner join
+    - left join
+    - right join
+    - ένωση πινάκων
+    - πως συνδυάζω πίνακες
+    - εξήγησε join
+    - τύποι join
+
+- intent: ask_group_by
+  examples: |
+    - τι είναι το group by
+    - πως κάνω ομαδοποίηση
+    - group by εντολή
+    - παράδειγμα group by
+    - ομαδοποίηση δεδομένων
+    - grouping
+    - πως ομαδοποιώ
+    - εξήγησε group by
+    - group by σύνταξη
+    - aggregate με group
+
+- intent: ask_having
+  examples: |
+    - τι είναι το having
+    - having εντολή
+    - παράδειγμα having
+    - διαφορά where having
+    - having clause
+    - φιλτράρισμα ομάδων
+    - πως φιλτράρω μετά group by
+    - εξήγησε having
+    - having vs where
+
+- intent: ask_count
+  examples: |
+    - τι είναι το count
+    - count εντολή
+    - πως μετράω εγγραφές
+    - παράδειγμα count
+    - count function
+    - μέτρηση
+    - count star
+    - count distinct
+    - εξήγησε count
+
+- intent: ask_sum
+  examples: |
+    - τι είναι το sum
+    - sum εντολή
+    - άθροισμα
+    - πως αθροίζω
+    - παράδειγμα sum
+    - sum function
+    - συνολικό άθροισμα
+    - εξήγησε sum
+
+- intent: ask_avg
+  examples: |
+    - τι είναι το avg
+    - avg εντολή
+    - μέσος όρος
+    - average
+    - παράδειγμα avg
+    - πως υπολογίζω μέσο όρο
+    - avg function
+    - εξήγησε avg
+
+- intent: ask_create_table
+  examples: |
+    - τι είναι το create table
+    - πως δημιουργώ πίνακα
+    - create table εντολή
+    - παράδειγμα create table
+    - δημιουργία πίνακα
+    - νέος πίνακας
+    - create table σύνταξη
+    - εξήγησε create table
+
+- intent: ask_primary_key
+  examples: |
+    - τι είναι το primary key
+    - primary key εντολή
+    - πρωτεύον κλειδί
+    - παράδειγμα primary key
+    - πως ορίζω primary key
+    - pk
+    - μοναδικό κλειδί
+    - εξήγησε primary key
+
+- intent: ask_foreign_key
+  examples: |
+    - τι είναι το foreign key
+    - foreign key εντολή
+    - ξένο κλειδί
+    - παράδειγμα foreign key
+    - πως ορίζω foreign key
+    - fk
+    - σύνδεση πινάκων
+    - εξήγησε foreign key
+
+- intent: ask_subquery
+  examples: |
+    - τι είναι το subquery
+    - subquery εντολή
+    - υποερώτημα
+    - παράδειγμα subquery
+    - nested query
+    - ερώτημα μέσα σε ερώτημα
+    - πως κάνω subquery
+    - εξήγησε subquery
+
+- intent: ask_view
+  examples: |
+    - τι είναι το view
+    - view εντολή
+    - όψεις
+    - παράδειγμα view
+    - create view
+    - εικονικός πίνακας
+    - πως φτιάχνω view
+    - εξήγησε view
+
+- intent: ask_example
+  examples: |
+    - δείξε μου παράδειγμα
+    - θέλω example
+    - ένα παράδειγμα
+    - παράδειγμα κώδικα
+    - sample query
+    - code example
+    - δείξε κώδικα
+
+- intent: ask_difference
+  examples: |
+    - ποια η διαφορά
+    - διαφορά where having
+    - where vs having
+    - inner vs left join
+    - σύγκριση
+    - τι αλλάζει
