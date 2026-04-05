@@ -191,18 +191,6 @@ const RASA_SERVER_URL = 'https://your-rasa-url.com'; // για production
 1. **Rasa Bot Offline:** Σε αυτή την περίπτωση, το frontend λειτουργεί σε "demo mode" με προκαθορισμένες απαντήσεις
 2. **Mobile Navigation:** Για screens < 480px, το navigation menu κρύβεται (future improvement: hamburger menu)
 
-## 📝 TODO / Future Improvements
-
-- [ ] Hamburger menu για mobile
-- [ ] Dark mode toggle
-- [ ] SQL Playground (live query execution)
-- [ ] Progress tracking
-- [ ] User accounts & authentication
-- [ ] Quiz/Assessment system
-- [ ] Certificate generation
-- [ ] Multilingual support (EN/GR toggle)
-- [ ] Advanced analytics
-
 ## 📄 License
 
 Το εκπαιδευτικό υλικό βασίζεται σε σημειώσεις από το Διεθνές Πανεπιστήμιο της Ελλάδος (ΔΙΠΑΕ).
@@ -211,8 +199,8 @@ const RASA_SERVER_URL = 'https://your-rasa-url.com'; // για production
 
 **Εκπαιδευτικό Υλικό:**
 - Επικ. Καθ. Ιωάννης Καζανίδης
-- Τμήμα Πληροφορικής, ΔΙΠΑΕ
-- "Εισαγωγή στην SQL" (Καβάλα 2021)
+- Τμήμα Πληροφορικής, ΔΠΘ
+- "Εισαγωγή στην SQL" (Καβάλα 2026)
 
 **Τεχνολογία:**
 - [Rasa Open Source](https://rasa.com/)
