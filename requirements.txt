@@ -2,5 +2,6 @@
 
 # Rasa Open Source
 rasa
+cecil
 
 # Python 3.8, 3.9, ή 3.10 ΜΟΝΟ (ΟΧΙ 3.11+)
