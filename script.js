@@ -150,11 +150,11 @@ function removeTypingIndicator() {
 // ==========================================
 
 // Configuration for Rasa server
-const RASA_SERVER_URL = 'rasasql-production-ai.up.railway.app:5005'; // Change this to your Rasa server URL
+const RASA_SERVER_URL = 'https://rasasql-production.up.railway.app'; // Proxied through HTTP server on same domain
 
 async function sendToRasa(message) {
     try {
-        // Send message to Rasa
+        // Send message to Rasa (proxied via HTTP server)
         const response = await fetch(`${RASA_SERVER_URL}/webhooks/rest/webhook`, {
             method: 'POST',
             headers: {
@@ -333,12 +333,14 @@ console.log('🚀 SQL Learning Platform Initialized');
 console.log('💬 Chat widget ready');
 console.log('📚 9 chapters loaded');
 
-// Check if Rasa server is available
+// Check if Rasa proxy is reachable
 fetch(`${RASA_SERVER_URL}/webhooks/rest/webhook`, {
-    method: 'GET',
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({ sender: 'healthcheck', message: 'ping' })
 }).then(() => {
-    console.log('✅ Rasa server connected');
+    console.log('✅ Rasa proxy connected');
 }).catch(() => {
-    console.log('⚠️ Rasa server not available - using demo mode');
-    console.log(`Expected Rasa at: ${RASA_SERVER_URL}`);
+    console.log('⚠️ Rasa proxy not available - using demo mode');
+    console.log(`Expected proxy at: ${RASA_SERVER_URL}`);
 });
