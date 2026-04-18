@@ -150,7 +150,7 @@ function removeTypingIndicator() {
 // ==========================================
 
 // Configuration for Rasa server
-const RASA_SERVER_URL = 'rasasql-production-ai.up.railway.app:5005'; // Change this to your Rasa server URL
+const RASA_SERVER_URL = 'https://rasasql-production-ai.up.railway.app'; // Change this to your Rasa server URL
 
 async function sendToRasa(message) {
     try {
