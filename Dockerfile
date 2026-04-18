@@ -4,4 +4,6 @@ COPY requirements.txt .
 RUN pip install -r requirements.txt
 COPY . .
 EXPOSE 5005
+EXPOSE 8000
 CMD ["rasa", "run", "--enable-api", "--cors", "*", "--port", "5005"]
+CMD ["python3", "-m", "http.server", "8000"]
