@@ -64,8 +64,6 @@ rasa train
 rasa run --enable-api --cors "*" --port 5005
 ```
 
-**Για αναλυτικές οδηγίες, δείτε το [DEPLOYMENT_GUIDE.md](DEPLOYMENT_GUIDE.md)**
-
 ## Περιεχόμενο Μαθήματος
 
 ### Κεφάλαια:
@@ -133,8 +131,6 @@ rasa run --enable-api --cors "*" --port 5005
 - **AWS/Google Cloud**
 - **Railway**
 - **Docker**
-
-**Αναλυτικές οδηγίες:** [DEPLOYMENT_GUIDE.md](DEPLOYMENT_GUIDE.md)
 
 ## ⚙️ Configuration
 
