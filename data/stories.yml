@@ -92,3 +92,619 @@ stories:
   steps:
   - intent: goodbye
   - action: utter_goodbye
+
+- story: ask format definition
+  steps:
+  - intent: ask_format_definition
+  - action: utter_ask_format_definition
+
+- story: ask text vs binary
+  steps:
+  - intent: ask_text_vs_binary
+  - action: utter_ask_text_vs_binary
+
+- story: ask text formats examples
+  steps:
+  - intent: ask_text_formats_examples
+  - action: utter_ask_text_formats_examples
+
+- story: ask csv characteristics
+  steps:
+  - intent: ask_csv_characteristics
+  - action: utter_ask_csv_characteristics
+
+- story: ask csv programs
+  steps:
+  - intent: ask_csv_programs
+  - action: utter_ask_csv_programs
+
+- story: ask wordpad disadvantages
+  steps:
+  - intent: ask_wordpad_disadvantages
+  - action: utter_ask_wordpad_disadvantages
+
+- story: ask data recording properties
+  steps:
+  - intent: ask_data_recording_properties
+  - action: utter_ask_data_recording_properties
+
+- story: ask data modeling
+  steps:
+  - intent: ask_data_modeling
+  - action: utter_ask_data_modeling
+
+- story: ask entity property representation
+  steps:
+  - intent: ask_entity_property_representation
+  - action: utter_ask_entity_property_representation
+
+- story: ask friend entity definition
+  steps:
+  - intent: ask_friend_entity_definition
+  - action: utter_ask_friend_entity_definition
+
+- story: ask sql create table
+  steps:
+  - intent: ask_sql_create_table
+  - action: utter_ask_sql_create_table
+
+- story: ask varchar meaning
+  steps:
+  - intent: ask_varchar_meaning
+  - action: utter_ask_varchar_meaning
+
+- story: ask primary key role
+  steps:
+  - intent: ask_primary_key_role
+  - action: utter_ask_primary_key_role
+
+- story: ask numeric vs text preference
+  steps:
+  - intent: ask_numeric_vs_text_preference
+  - action: utter_ask_numeric_vs_text_preference
+
+- story: ask non numeric examples
+  steps:
+  - intent: ask_non_numeric_examples
+  - action: utter_ask_non_numeric_examples
+
+- story: ask date storage presentation
+  steps:
+  - intent: ask_date_storage_presentation
+  - action: utter_ask_date_storage_presentation
+
+- story: ask popular db systems
+  steps:
+  - intent: ask_popular_db_systems
+  - action: utter_ask_popular_db_systems
+
+- story: ask global economic sources
+  steps:
+  - intent: ask_global_economic_sources
+  - action: utter_ask_global_economic_sources
+
+- story: ask greek open data
+  steps:
+  - intent: ask_greek_open_data
+  - action: utter_ask_greek_open_data
+
+- story: ask access environment
+  steps:
+  - intent: ask_access_environment
+  - action: utter_ask_access_environment
+
+- story: ask excel vs db difference
+  steps:
+  - intent: ask_excel_vs_db_difference
+  - action: utter_ask_excel_vs_db_difference
+
+- story: ask not null meaning
+  steps:
+  - intent: ask_not_null_meaning
+  - action: utter_ask_not_null_meaning
+
+- story: ask binary file example
+  steps:
+  - intent: ask_binary_file_example
+  - action: utter_ask_binary_file_example
+
+- story: ask binary to text conversion
+  steps:
+  - intent: ask_binary_to_text_conversion
+  - action: utter_ask_binary_to_text_conversion
+
+- story: ask historical computer name
+  steps:
+  - intent: ask_historical_computer_name
+  - action: utter_ask_historical_computer_name
+
+- story: ask relational proposer
+  steps:
+  - intent: ask_relational_proposer
+  - action: utter_ask_relational_proposer
+
+- story: ask relational structure
+  steps:
+  - intent: ask_relational_structure
+  - action: utter_ask_relational_structure
+
+- story: ask attribute definition
+  steps:
+  - intent: ask_attribute_definition
+  - action: utter_ask_attribute_definition
+
+- story: ask tuple definition
+  steps:
+  - intent: ask_tuple_definition
+  - action: utter_ask_tuple_definition
+
+- story: ask domain definition
+  steps:
+  - intent: ask_domain_definition
+  - action: utter_ask_domain_definition
+
+- story: ask relation schema
+  steps:
+  - intent: ask_relation_schema
+  - action: utter_ask_relation_schema
+
+- story: ask relation instance
+  steps:
+  - intent: ask_relation_instance
+  - action: utter_ask_relation_instance
+
+- story: ask tuple order
+  steps:
+  - intent: ask_tuple_order
+  - action: utter_ask_tuple_order
+
+- story: ask duplicate tuples
+  steps:
+  - intent: ask_duplicate_tuples
+  - action: utter_ask_duplicate_tuples
+
+- story: ask superkey
+  steps:
+  - intent: ask_superkey
+  - action: utter_ask_superkey
+
+- story: ask candidate key
+  steps:
+  - intent: ask_candidate_key
+  - action: utter_ask_candidate_key
+
+- story: ask entity integrity
+  steps:
+  - intent: ask_entity_integrity
+  - action: utter_ask_entity_integrity
+
+- story: ask referential integrity
+  steps:
+  - intent: ask_referential_integrity
+  - action: utter_ask_referential_integrity
+
+- story: ask null meaning
+  steps:
+  - intent: ask_null_meaning
+  - action: utter_ask_null_meaning
+
+- story: ask null not number
+  steps:
+  - intent: ask_null_not_number
+  - action: utter_ask_null_not_number
+
+- story: ask relation schema notation
+  steps:
+  - intent: ask_relation_schema_notation
+  - action: utter_ask_relation_schema_notation
+
+- story: ask primary vs alternate key
+  steps:
+  - intent: ask_primary_vs_alternate_key
+  - action: utter_ask_primary_vs_alternate_key
+
+- story: ask database schema
+  steps:
+  - intent: ask_database_schema
+  - action: utter_ask_database_schema
+
+- story: ask atomicity requirement
+  steps:
+  - intent: ask_atomicity_requirement
+  - action: utter_ask_atomicity_requirement
+
+- story: ask degree relation
+  steps:
+  - intent: ask_degree_relation
+  - action: utter_ask_degree_relation
+
+- story: ask cardinality
+  steps:
+  - intent: ask_cardinality
+  - action: utter_ask_cardinality
+
+- story: ask composite primary key
+  steps:
+  - intent: ask_composite_primary_key
+  - action: utter_ask_composite_primary_key
+
+- story: ask integrity constraints purpose
+  steps:
+  - intent: ask_integrity_constraints_purpose
+  - action: utter_ask_integrity_constraints_purpose
+
+- story: ask er model definition
+  steps:
+  - intent: ask_er_model_definition
+  - action: utter_ask_er_model_definition
+
+- story: ask er elements
+  steps:
+  - intent: ask_er_elements
+  - action: utter_ask_er_elements
+
+- story: ask entity definition
+  steps:
+  - intent: ask_entity_definition
+  - action: utter_ask_entity_definition
+
+- story: ask attribute definition er
+  steps:
+  - intent: ask_attribute_definition_er
+  - action: utter_ask_attribute_definition_er
+
+- story: ask entity attribute representation
+  steps:
+  - intent: ask_entity_attribute_representation
+  - action: utter_ask_entity_attribute_representation
+
+- story: ask domain definition er
+  steps:
+  - intent: ask_domain_definition_er
+  - action: utter_ask_domain_definition_er
+
+- story: ask simple attribute
+  steps:
+  - intent: ask_simple_attribute
+  - action: utter_ask_simple_attribute
+
+- story: ask composite attribute
+  steps:
+  - intent: ask_composite_attribute
+  - action: utter_ask_composite_attribute
+
+- story: ask single valued attribute
+  steps:
+  - intent: ask_single_valued_attribute
+  - action: utter_ask_single_valued_attribute
+
+- story: ask multi valued attribute
+  steps:
+  - intent: ask_multi_valued_attribute
+  - action: utter_ask_multi_valued_attribute
+
+- story: ask derived attribute
+  steps:
+  - intent: ask_derived_attribute
+  - action: utter_ask_derived_attribute
+
+- story: ask entity key
+  steps:
+  - intent: ask_entity_key
+  - action: utter_ask_entity_key
+
+- story: ask key symbolization
+  steps:
+  - intent: ask_key_symbolization
+  - action: utter_ask_key_symbolization
+
+- story: ask entity type
+  steps:
+  - intent: ask_entity_type
+  - action: utter_ask_entity_type
+
+- story: ask relationship definition
+  steps:
+  - intent: ask_relationship_definition
+  - action: utter_ask_relationship_definition
+
+- story: ask relationship representation
+  steps:
+  - intent: ask_relationship_representation
+  - action: utter_ask_relationship_representation
+
+- story: ask relationship degree
+  steps:
+  - intent: ask_relationship_degree
+  - action: utter_ask_relationship_degree
+
+- story: ask cardinality types
+  steps:
+  - intent: ask_cardinality_types
+  - action: utter_ask_cardinality_types
+
+- story: ask one to many meaning
+  steps:
+  - intent: ask_one_to_many_meaning
+  - action: utter_ask_one_to_many_meaning
+
+- story: ask weak entity
+  steps:
+  - intent: ask_weak_entity
+  - action: utter_ask_weak_entity
+
+- story: ask weak entity representation
+  steps:
+  - intent: ask_weak_entity_representation
+  - action: utter_ask_weak_entity_representation
+
+- story: ask partial key
+  steps:
+  - intent: ask_partial_key
+  - action: utter_ask_partial_key
+
+- story: ask participation constraint
+  steps:
+  - intent: ask_participation_constraint
+  - action: utter_ask_participation_constraint
+
+- story: ask total participation
+  steps:
+  - intent: ask_total_participation
+  - action: utter_ask_total_participation
+
+- story: ask relationship attributes
+  steps:
+  - intent: ask_relationship_attributes
+  - action: utter_ask_relationship_attributes
+
+- story: ask relational algebra definition
+  steps:
+  - intent: ask_relational_algebra_definition
+  - action: utter_ask_relational_algebra_definition
+
+- story: ask relational algebra operations
+  steps:
+  - intent: ask_relational_algebra_operations
+  - action: utter_ask_relational_algebra_operations
+
+- story: ask select operation
+  steps:
+  - intent: ask_select_operation
+  - action: utter_ask_select_operation
+
+- story: ask selection predicate operators
+  steps:
+  - intent: ask_selection_predicate_operators
+  - action: utter_ask_selection_predicate_operators
+
+- story: ask projection operation
+  steps:
+  - intent: ask_projection_operation
+  - action: utter_ask_projection_operation
+
+- story: ask selection vs projection
+  steps:
+  - intent: ask_selection_vs_projection
+  - action: utter_ask_selection_vs_projection
+
+- story: ask union constraints
+  steps:
+  - intent: ask_union_constraints
+  - action: utter_ask_union_constraints
+
+- story: ask set difference result
+  steps:
+  - intent: ask_set_difference_result
+  - action: utter_ask_set_difference_result
+
+- story: ask cartesian product
+  steps:
+  - intent: ask_cartesian_product
+  - action: utter_ask_cartesian_product
+
+- story: ask cartesian product degree
+  steps:
+  - intent: ask_cartesian_product_degree
+  - action: utter_ask_cartesian_product_degree
+
+- story: ask rename operation
+  steps:
+  - intent: ask_rename_operation
+  - action: utter_ask_rename_operation
+
+- story: ask intersection operation
+  steps:
+  - intent: ask_intersection_operation
+  - action: utter_ask_intersection_operation
+
+- story: ask intersection with difference
+  steps:
+  - intent: ask_intersection_with_difference
+  - action: utter_ask_intersection_with_difference
+
+- story: ask natural join
+  steps:
+  - intent: ask_natural_join
+  - action: utter_ask_natural_join
+
+- story: ask natural join no common attributes
+  steps:
+  - intent: ask_natural_join_no_common_attributes
+  - action: utter_ask_natural_join_no_common_attributes
+
+- story: ask outer join definition
+  steps:
+  - intent: ask_outer_join_definition
+  - action: utter_ask_outer_join_definition
+
+- story: ask outer join types
+  steps:
+  - intent: ask_outer_join_types
+  - action: utter_ask_outer_join_types
+
+- story: ask left outer join
+  steps:
+  - intent: ask_left_outer_join
+  - action: utter_ask_left_outer_join
+
+- story: ask assignment operation
+  steps:
+  - intent: ask_assignment_operation
+  - action: utter_ask_assignment_operation
+
+- story: ask grouping operations
+  steps:
+  - intent: ask_grouping_operations
+  - action: utter_ask_grouping_operations
+
+- story: ask aggregate functions
+  steps:
+  - intent: ask_aggregate_functions
+  - action: utter_ask_aggregate_functions
+
+- story: ask grouping in G
+  steps:
+  - intent: ask_grouping_in_G
+  - action: utter_ask_grouping_in_G
+
+- story: ask division operation
+  steps:
+  - intent: ask_division_operation
+  - action: utter_ask_division_operation
+
+- story: ask relational algebra usage
+  steps:
+  - intent: ask_relational_algebra_usage
+  - action: utter_ask_relational_algebra_usage
+
+- story: ask null in joins
+  steps:
+  - intent: ask_null_in_joins
+  - action: utter_ask_null_in_joins
+
+- story: ask normalization definition
+  steps:
+  - intent: ask_normalization_definition
+  - action: utter_ask_normalization_definition
+
+- story: ask normalization goal
+  steps:
+  - intent: ask_normalization_goal
+  - action: utter_ask_normalization_goal
+
+- story: ask functional dependency
+  steps:
+  - intent: ask_functional_dependency
+  - action: utter_ask_functional_dependency
+
+- story: ask full functional dependency
+  steps:
+  - intent: ask_full_functional_dependency
+  - action: utter_ask_full_functional_dependency
+
+- story: ask partial functional dependency
+  steps:
+  - intent: ask_partial_functional_dependency
+  - action: utter_ask_partial_functional_dependency
+
+- story: ask transitive dependency
+  steps:
+  - intent: ask_transitive_dependency
+  - action: utter_ask_transitive_dependency
+
+- story: ask anomalies
+  steps:
+  - intent: ask_anomalies
+  - action: utter_ask_anomalies
+
+- story: ask 1nf
+  steps:
+  - intent: ask_1nf
+  - action: utter_ask_1nf
+
+- story: ask 2nf
+  steps:
+  - intent: ask_2nf
+  - action: utter_ask_2nf
+
+- story: ask 3nf
+  steps:
+  - intent: ask_3nf
+  - action: utter_ask_3nf
+
+- story: ask bcnf
+  steps:
+  - intent: ask_bcnf
+  - action: utter_ask_bcnf
+
+- story: ask redundancy problems
+  steps:
+  - intent: ask_redundancy_problems
+  - action: utter_ask_redundancy_problems
+
+- story: ask normalization process
+  steps:
+  - intent: ask_normalization_process
+  - action: utter_ask_normalization_process
+
+- story: ask lossless join
+  steps:
+  - intent: ask_lossless_join
+  - action: utter_ask_lossless_join
+
+- story: ask prime attribute
+  steps:
+  - intent: ask_prime_attribute
+  - action: utter_ask_prime_attribute
+
+- story: ask 3nf vs bcnf
+  steps:
+  - intent: ask_3nf_vs_bcnf
+  - action: utter_ask_3nf_vs_bcnf
+
+- story: ask 2nf composite keys
+  steps:
+  - intent: ask_2nf_composite_keys
+  - action: utter_ask_2nf_composite_keys
+
+- story: ask deletion anomaly
+  steps:
+  - intent: ask_deletion_anomaly
+  - action: utter_ask_deletion_anomaly
+
+- story: ask insertion anomaly
+  steps:
+  - intent: ask_insertion_anomaly
+  - action: utter_ask_insertion_anomaly
+
+- story: ask determinant
+  steps:
+  - intent: ask_determinant
+  - action: utter_ask_determinant
+
+- story: ask normalization always needed
+  steps:
+  - intent: ask_normalization_always_needed
+  - action: utter_ask_normalization_always_needed
+
+- story: ask recognize transitive
+  steps:
+  - intent: ask_recognize_transitive
+  - action: utter_ask_recognize_transitive
+
+- story: ask trivial functional dependency
+  steps:
+  - intent: ask_trivial_functional_dependency
+  - action: utter_ask_trivial_functional_dependency
+
+- story: ask lossless join property
+  steps:
+  - intent: ask_lossless_join_property
+  - action: utter_ask_lossless_join_property
+
+- story: ask candidate keys bcnf
+  steps:
+  - intent: ask_candidate_keys_bcnf
+  - action: utter_ask_candidate_keys_bcnf
+  - action: utter_ask_null_in_joins
