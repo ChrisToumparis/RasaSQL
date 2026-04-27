@@ -31,6 +31,129 @@ intents:
   - ask_view
   - ask_example
   - ask_difference
+  - ask_format_definition
+  - ask_text_vs_binary
+  - ask_text_formats_examples
+  - ask_csv_characteristics
+  - ask_csv_programs
+  - ask_wordpad_disadvantages
+  - ask_data_recording_properties
+  - ask_data_modeling
+  - ask_entity_property_representation
+  - ask_friend_entity_definition
+  - ask_sql_create_table
+  - ask_varchar_meaning
+  - ask_primary_key_role
+  - ask_numeric_vs_text_preference
+  - ask_non_numeric_examples
+  - ask_date_storage_presentation
+  - ask_popular_db_systems
+  - ask_global_economic_sources
+  - ask_greek_open_data
+  - ask_access_environment
+  - ask_excel_vs_db_difference
+  - ask_not_null_meaning
+  - ask_binary_file_example
+  - ask_binary_to_text_conversion
+  - ask_historical_computer_name
+  - ask_relational_proposer
+  - ask_relational_structure
+  - ask_attribute_definition
+  - ask_tuple_definition
+  - ask_domain_definition
+  - ask_relation_schema
+  - ask_relation_instance
+  - ask_tuple_order
+  - ask_duplicate_tuples
+  - ask_superkey
+  - ask_candidate_key
+  - ask_entity_integrity
+  - ask_referential_integrity
+  - ask_null_meaning
+  - ask_null_not_number
+  - ask_relation_schema_notation
+  - ask_primary_vs_alternate_key
+  - ask_database_schema
+  - ask_atomicity_requirement
+  - ask_degree_relation
+  - ask_cardinality
+  - ask_composite_primary_key
+  - ask_integrity_constraints_purpose
+  - ask_er_model_definition
+  - ask_er_elements
+  - ask_entity_definition
+  - ask_attribute_definition_er
+  - ask_entity_attribute_representation
+  - ask_domain_definition_er
+  - ask_simple_attribute
+  - ask_composite_attribute
+  - ask_single_valued_attribute
+  - ask_multi_valued_attribute
+  - ask_derived_attribute
+  - ask_entity_key
+  - ask_key_symbolization
+  - ask_entity_type
+  - ask_relationship_definition
+  - ask_relationship_representation
+  - ask_relationship_degree
+  - ask_cardinality_types
+  - ask_one_to_many_meaning
+  - ask_weak_entity
+  - ask_weak_entity_representation
+  - ask_partial_key
+  - ask_participation_constraint
+  - ask_total_participation
+  - ask_relationship_attributes
+  - ask_relational_algebra_definition
+  - ask_relational_algebra_operations
+  - ask_select_operation
+  - ask_selection_predicate_operators
+  - ask_projection_operation
+  - ask_selection_vs_projection
+  - ask_union_constraints
+  - ask_set_difference_result
+  - ask_cartesian_product
+  - ask_cartesian_product_degree
+  - ask_rename_operation
+  - ask_intersection_operation
+  - ask_intersection_with_difference
+  - ask_natural_join
+  - ask_natural_join_no_common_attributes
+  - ask_outer_join_definition
+  - ask_outer_join_types
+  - ask_left_outer_join
+  - ask_assignment_operation
+  - ask_grouping_operations
+  - ask_aggregate_functions
+  - ask_grouping_in_G
+  - ask_division_operation
+  - ask_relational_algebra_usage
+  - ask_null_in_joins
+  - ask_normalization_definition
+  - ask_normalization_goal
+  - ask_functional_dependency
+  - ask_full_functional_dependency
+  - ask_partial_functional_dependency
+  - ask_transitive_dependency
+  - ask_anomalies
+  - ask_1nf
+  - ask_2nf
+  - ask_3nf
+  - ask_bcnf
+  - ask_redundancy_problems
+  - ask_normalization_process
+  - ask_lossless_join
+  - ask_prime_attribute
+  - ask_3nf_vs_bcnf
+  - ask_2nf_composite_keys
+  - ask_deletion_anomaly
+  - ask_insertion_anomaly
+  - ask_determinant
+  - ask_normalization_always_needed
+  - ask_recognize_transitive
+  - ask_trivial_functional_dependency
+  - ask_lossless_join_property
+  - ask_candidate_keys_bcnf
 
 # Responses - Απαντήσεις σε Ελληνικά
 responses:
@@ -84,10 +207,10 @@ responses:
     - text: "Η CREATE TABLE δημιουργεί νέο πίνακα.\n\n**Σύνταξη:**\n```sql\nCREATE TABLE πίνακας (\n  πεδίο1 τύπος [περιορισμοί],\n  πεδίο2 τύπος,\n  PRIMARY KEY (πεδίο1)\n);\n```\n\n**Παράδειγμα:**\n```sql\nCREATE TABLE Students (\n  StudentID INT PRIMARY KEY,\n  Name VARCHAR(50) NOT NULL,\n  Age INT\n);\n```"
 
   utter_ask_primary_key:
-    - text: "Το PRIMARY KEY είναι μοναδικό αναγνωριστικό κάθε εγγραφής.\n\n**Χαρακτηριστικά:**\n• Μοναδικό (UNIQUE)\n• Όχι NULL\n• Ένα ανά πίνακα\n\n**Παράδειγμα:**\n```sql\nCREATE TABLE Country (\n  Code CHAR(3) PRIMARY KEY,\n  Name VARCHAR(52)\n);\n```"
+    - text: "Είναι το υποψήφιο κλειδί που επιλέγεται από τον σχεδιαστή για να αναγνωρίζει μοναδικά τις πλειάδες της σχέσης."
 
   utter_ask_foreign_key:
-    - text: "Το FOREIGN KEY συνδέει δύο πίνακες.\n\n**Παράδειγμα:**\n```sql\nCREATE TABLE City (\n  ID INT PRIMARY KEY,\n  CountryCode CHAR(3),\n  FOREIGN KEY (CountryCode) REFERENCES Country(Code)\n);\n```\n\nΤο CountryCode στον City πρέπει να υπάρχει στον Country!"
+    - text: "Είναι ένα γνώρισμα σε έναν πίνακα που αντιστοιχεί στο πρωτεύον κλειδί ενός άλλου πίνακα, δημιουργώντας συσχέτιση μεταξύ τους."
 
   utter_ask_subquery:
     - text: "Τα Subqueries είναι ερωτήματα μέσα σε ερωτήματα.\n\n**Παράδειγμα:**\n```sql\nSELECT Name\nFROM City\nWHERE Population > (\n  SELECT AVG(Population)\n  FROM City\n);\n```\n\nΕπιστρέφει πόλεις με πληθυσμό πάνω από τον μέσο όρο!"
@@ -100,6 +223,375 @@ responses:
 
   utter_ask_difference:
     - text: "Για ποιες εντολές θες να δεις τη διαφορά; (π.χ. WHERE vs HAVING, INNER vs LEFT JOIN)"
+
+  utter_ask_format_definition:
+    - text: "Είναι ο προτυποποιημένος τρόπος κωδικοποίησης δεδομένων (bits) που αποθηκεύονται σε ψηφιακά μέσα."
+
+  utter_ask_text_vs_binary:
+    - text: "Τα αρχεία κειμένου μπορούν να διαβαστούν απευθείας από άνθρωπο και Η/Υ, ενώ τα δυαδικά απαιτούν τη μεσολάβηση κάποιου προγράμματος για να διαβαστούν από άνθρωπο."
+
+  utter_ask_text_formats_examples:
+    - text: "Τα .csv, .tsv και .txt."
+
+  utter_ask_csv_characteristics:
+    - text: "Είναι αρχεία κειμένου που περιέχουν λίστες τιμών χωρισμένες με κόμματα ή κάποιον άλλο χαρακτήρα."
+
+  utter_ask_csv_programs:
+    - text: "Το Excel, το Calc και η γλώσσα R."
+
+  utter_ask_wordpad_disadvantages:
+    - text: "Είναι εύκολο να γίνουν λάθη (διπλοεγγραφές), είναι δύσκολη η αναζήτηση πληροφοριών και αδύνατο να απαντηθούν σύνθετα ερωτήματα."
+
+  utter_ask_data_recording_properties:
+    - text: "Εύκολη εισαγωγή/διαγραφή, εύκολη ανάσυρση πληροφοριών και αποφυγή καταγραφής διπλότυπων δεδομένων."
+
+  utter_ask_data_modeling:
+    - text: "Είναι η διαδικασία της αφαίρεσης με την οποία επιλέγουμε ποια στοιχεία της πραγματικότητας θα αναπαραστήσουμε στη βάση δεδομένων."
+
+  utter_ask_entity_property_representation:
+    - text: "Η οντότητα αναπαρίσταται με ορθογώνιο και η ιδιότητα με έλλειψη."
+
+  utter_ask_friend_entity_definition:
+    - text: "Περιλαμβάνει το Όνομα, τη Διεύθυνση, το Τηλέφωνο και τα Γενέθλια."
+
+  utter_ask_sql_create_table:
+    - text: "Η εντολή CREATE TABLE."
+
+  utter_ask_varchar_meaning:
+    - text: "Σημαίνει ότι το πεδίο δέχεται χαρακτήρες (κείμενο) με μέγιστο μήκος 50 χαρακτήρες."
+
+  utter_ask_primary_key_role:
+    - text: "Είναι ένας μοναδικός κωδικός που προσδιορίζει κάθε εγγραφή του πίνακα με μοναδικό τρόπο."
+
+  utter_ask_numeric_vs_text_preference:
+    - text: "Για να μπορούμε να εκτελούμε αλγεβρικές πράξεις πάνω στα δεδομένα αυτά."
+
+  utter_ask_non_numeric_examples:
+    - text: "Αριθμός τηλεφώνου, ΑΦΜ και αριθμός τραπεζικού λογαριασμού."
+
+  utter_ask_date_storage_presentation:
+    - text: "Αποθηκεύονται ως αριθμοί αλλά παρουσιάζονται ως κείμενο."
+
+  utter_ask_popular_db_systems:
+    - text: "Το Facebook, η Amazon, η Βικιπαίδεια και η airtickets.gr."
+
+  utter_ask_global_economic_sources:
+    - text: "The World Bank (Παγκόσμια Τράπεζα) και Eurostat."
+
+  utter_ask_greek_open_data:
+    - text: "Στη διεύθυνση http://data.gov.gr."
+
+  utter_ask_access_environment:
+    - text: "Επιτρέπει τη δημιουργία πινάκων, τον ορισμό πεδίων και τη διαχείριση δεδομένων μέσω φορμών."
+
+  utter_ask_excel_vs_db_difference:
+    - text: "Στη βάση δεδομένων πρέπει να ορίσουμε εξαρχής τη δομή (πεδία και τύπους), ενώ το Excel παρέχει ένα έτοιμο πλέγμα."
+
+  utter_ask_not_null_meaning:
+    - text: "Σημαίνει ότι το πεδίο αυτό είναι υποχρεωτικό και δεν μπορεί να παραμείνει κενό κατά την εισαγωγή δεδομένων."
+
+  utter_ask_binary_file_example:
+    - text: "Ένα αρχείο μουσικής .mp3 ή ένα αρχείο βίντεο .mp4."
+
+  utter_ask_binary_to_text_conversion:
+    - text: "Ναι, είναι δυνατή η μετατροπή από τον ένα τύπο στον άλλο."
+
+  utter_ask_historical_computer_name:
+    - text: "DSIR ACE."
+
+  utter_ask_relational_proposer:
+    - text: "Προτάθηκε από τον E.F. Codd το 1970."
+
+  utter_ask_relational_structure:
+    - text: "Τα δεδομένα οργανώνονται σε δισδιάστατους πίνακες που ονομάζονται «σχέσεις»."
+
+  utter_ask_attribute_definition:
+    - text: "Είναι οι στήλες του πίνακα που περιγράφουν τις ιδιότητες της οντότητας."
+
+  utter_ask_tuple_definition:
+    - text: "Είναι οι γραμμές του πίνακα, όπου κάθε μία αντιστοιχεί σε μια συγκεκριμένη οντότητα."
+
+  utter_ask_domain_definition:
+    - text: "Είναι το σύνολο των επιτρεπτών τιμών που μπορεί να πάρει ένα γνώρισμα."
+
+  utter_ask_relation_schema:
+    - text: "Είναι ο ορισμός της σχέσης, που περιλαμβάνει το όνομά της και τη λίστα των γνωρισμάτων της."
+
+  utter_ask_relation_instance:
+    - text: "Είναι το σύνολο των δεδομένων (πλειάδων) που περιέχει ο πίνακας μια συγκεκριμένη χρονική στιγμή."
+
+  utter_ask_tuple_order:
+    - text: "Δεν υπάρχει προκαθορισμένη σειρά στις πλειάδες· η σειρά εμφάνισης των γραμμών δεν έχει σημασία."
+
+  utter_ask_duplicate_tuples:
+    - text: "Όχι, όλες οι πλειάδες σε μια σχέση πρέπει να είναι διακριτές μεταξύ τους."
+
+  utter_ask_superkey:
+    - text: "Είναι ένα σύνολο γνωρισμάτων που προσδιορίζει μοναδικά κάθε πλειάδα μέσα στη σχέση."
+
+  utter_ask_candidate_key:
+    - text: "Είναι ένα ελάχιστο υπερκλειδί, δηλαδή ένα σύνολο γνωρισμάτων που δεν περιέχει κανένα μικρότερο υποσύνολο που να είναι επίσης υπερκλειδί."
+
+  utter_ask_entity_integrity:
+    - text: "Καμία τιμή του πρωτεύοντος κλειδιού δεν μπορεί να είναι κενή (null)."
+
+  utter_ask_referential_integrity:
+    - text: "Οι τιμές ενός ξένου κλειδιού πρέπει είτε να υπάρχουν ως τιμές πρωτεύοντος κλειδιού στον πίνακα αναφοράς, είτε να είναι κενές (null)."
+
+  utter_ask_null_meaning:
+    - text: "Αντιπροσωπεύει μια τιμή που είναι άγνωστη ή δεν εφαρμόζεται για μια συγκεκριμένη εγγραφή."
+
+  utter_ask_null_not_number:
+    - text: "Επειδή αποτελεί ειδική ένδειξη έλλειψης πληροφορίας και όχι συγκεκριμένη τιμή δεδομένου."
+
+  utter_ask_relation_schema_notation:
+    - text: "Συμβολίζεται ως R(A1,A2,...,An)."
+
+  utter_ask_primary_vs_alternate_key:
+    - text: "Πρωτεύον είναι αυτό που επιλέγεται, ενώ τα υπόλοιπα υποψήφια κλειδιά ονομάζονται εναλλακτικά."
+
+  utter_ask_database_schema:
+    - text: "Είναι το σύνολο όλων των σχημάτων σχέσεων που αποτελούν τη βάση δεδομένων."
+
+  utter_ask_atomicity_requirement:
+    - text: "Κάθε τιμή γνωρίσματος πρέπει να είναι ατομική (atomic), δηλαδή δεν επιτρέπονται σύνολα τιμών ή σύνθετες τιμές μέσα σε ένα πεδίο."
+
+  utter_ask_degree_relation:
+    - text: "Ο αριθμός των γνωρισμάτων (στηλών) καθορίζει τον «βαθμό» (degree) της σχέσης."
+
+  utter_ask_cardinality:
+    - text: "Είναι ο αριθμός των πλειάδων (γραμμών) που περιέχει η σχέση."
+
+  utter_ask_composite_primary_key:
+    - text: "Ναι, σε αυτή την περίπτωση ονομάζεται σύνθετο κλειδί."
+
+  utter_ask_integrity_constraints_purpose:
+    - text: "Να διασφαλίζουν ότι τα δεδομένα που εισάγονται στη βάση είναι έγκυρα και συνεπή."
+
+  utter_ask_er_model_definition:
+    - text: "Είναι ένα μοντέλο δεδομένων υψηλού επιπέδου που χρησιμοποιείται για τη σχεδίαση βάσεων δεδομένων, περιγράφοντας τη δομή τους με εννοιολογικό τρόπο."
+
+  utter_ask_er_elements:
+    - text: "Τα βασικά στοιχεία είναι οι οντότητες (entities), οι συσχετίσεις (relationships) και τα γνωρίσματα (attributes)."
+
+  utter_ask_entity_definition:
+    - text: "Οντότητα είναι ένα αντικείμενο του πραγματικού κόσμου που έχει αυτόνομη ύπαρξη και μπορεί να προσδιοριστεί μοναδικά (π.χ. ένας φοιτητής, ένα μάθημα)."
+
+  utter_ask_attribute_definition_er:
+    - text: "Είναι μια ιδιότητα που περιγράφει μια οντότητα (π.χ. το όνομα ή το τηλέφωνο ενός φίλου)."
+
+  utter_ask_entity_attribute_representation:
+    - text: "Η οντότητα αναπαρίσταται με ορθογώνιο και το γνώρισμα με έλλειψη."
+
+  utter_ask_domain_definition_er:
+    - text: "Είναι το σύνολο των επιτρεπτών τιμών που μπορεί να πάρει ένα γνώρισμα."
+
+  utter_ask_simple_attribute:
+    - text: "Είναι ένα γνώρισμα που δεν μπορεί να διαιρεθεί σε μικρότερα μέρη (π.χ. ο βαθμός ενός μαθήματος)."
+
+  utter_ask_composite_attribute:
+    - text: "Είναι ένα γνώρισμα που αποτελείται από άλλα απλούστερα γνωρίσματα (π.χ. η διεύθυνση που αποτελείται από οδό, αριθμό και πόλη)."
+
+  utter_ask_single_valued_attribute:
+    - text: "Είναι το γνώρισμα που έχει μία μόνο τιμή για μια συγκεκριμένη οντότητα (π.χ. ο Αριθμός Ταυτότητας)."
+
+  utter_ask_multi_valued_attribute:
+    - text: "Είναι το γνώρισμα που μπορεί να έχει περισσότερες από μία τιμές για την ίδια οντότητα (π.χ. τα τηλέφωνα ενός προσώπου)."
+
+  utter_ask_derived_attribute:
+    - text: "Είναι ένα γνώρισμα του οποίου η τιμή προκύπτει από άλλα γνωρίσματα (π.χ. η ηλικία που προκύπτει από την ημερομηνία γέννησης)."
+
+  utter_ask_entity_key:
+    - text: "Είναι ένα γνώρισμα (ή συνδυασμός γνωρισμάτων) του οποίου οι τιμές είναι μοναδικές για κάθε οντότητα του ίδιου τύπου."
+
+  utter_ask_key_symbolization:
+    - text: "Το όνομα του γνωρίσματος μέσα στην έλλειψη είναι υπογραμμισμένο."
+
+  utter_ask_entity_type:
+    - text: "Είναι ένα σύνολο οντοτήτων που μοιράζονται τα ίδια γνωρίσματα."
+
+  utter_ask_relationship_definition:
+    - text: "Είναι μια συσχέτιση ή αλληλεπίδραση μεταξύ δύο ή περισσότερων οντοτήτων."
+
+  utter_ask_relationship_representation:
+    - text: "Αναπαρίσταται με ένα σχήμα ρόμβου που συνδέεται με τις οντότητες που συμμετέχουν."
+
+  utter_ask_relationship_degree:
+    - text: "Είναι ο αριθμός των οντοτήτων που συμμετέχουν στη συσχέτιση (π.χ. δυαδική αν συμμετέχουν δύο οντότητες)."
+
+  utter_ask_cardinality_types:
+    - text: "Είναι οι συσχετίσεις 1:1 (ένα προς ένα), 1:Ν (ένα προς πολλά) και Μ:Ν (πολλά προς πολλά)."
+
+  utter_ask_one_to_many_meaning:
+    - text: "Σημαίνει ότι μια οντότητα τύπου Α μπορεί να συνδέεται με πολλές οντότητες τύπου Β, αλλά κάθε οντότητα Β συνδέεται με το πολύ μία οντότητα Α."
+
+  utter_ask_weak_entity:
+    - text: "Είναι μια οντότητα που δεν διαθέτει δικό της κλειδί και η ύπαρξή της εξαρτάται από μια άλλη οντότητα (την ισχυρή οντότητα)."
+
+  utter_ask_weak_entity_representation:
+    - text: "Αναπαρίσταται με ένα διπλό ορθογώνιο."
+
+  utter_ask_partial_key:
+    - text: "Είναι το γνώρισμα που μπορεί να ξεχωρίσει τις ασθενείς οντότητες που συνδέονται με την ίδια ισχυρή οντότητα (συμβολίζεται με διακεκομμένη υπογράμμιση)."
+
+  utter_ask_participation_constraint:
+    - text: "Καθορίζει αν η ύπαρξη μιας οντότητας εξαρτάται από τη συμμετοχή της σε μια συσχέτιση (ολική ή μερική συμμετοχή)."
+
+  utter_ask_total_participation:
+    - text: "Σημαίνει ότι κάθε οντότητα του συνόλου πρέπει υποχρεωτικά να συμμετέχει στη συσχέτιση (συμβολίζεται με διπλή γραμμή σύνδεσης)."
+
+  utter_ask_relationship_attributes:
+    - text: "Ναι, όταν μια ιδιότητα δεν ανήκει αποκλειστικά σε μία από τις συμμετέχουσες οντότητες αλλά προκύπτει από τη σύνδεσή τους."
+
+  utter_ask_relational_algebra_definition:
+    - text: "Είναι μια διαδικαστική γλώσσα επερώτησης που αποτελείται από ένα σύνολο πράξεων οι οποίες δέχονται ως είσοδο μία ή δύο σχέσεις και παράγουν ως αποτέλεσμα μια νέα σχέση."
+
+  utter_ask_relational_algebra_operations:
+    - text: "Οι βασικές πράξεις είναι η επιλογή (select), η προβολή (project), η ένωση (union), η διαφορά (set difference), το καρτεσιανό γινόμενο (cartesian product) και η μετονομασία (rename)."
+
+  utter_ask_select_operation:
+    - text: "Επιλέγει πλειάδες (γραμμές) από μια σχέση που ικανοποιούν ένα συγκεκριμένο κατηγόρημα ή συνθήκη."
+
+  utter_ask_selection_predicate_operators:
+    - text: "Χρησιμοποιούνται τελεστές σύγκρισης (=, ≠, >, ≥, <, ≤) και λογικοί σύνδεσμοι (∧, ∨, ¬)."
+
+  utter_ask_projection_operation:
+    - text: "Επιστρέφει μια νέα σχέση που περιλαμβάνει μόνο συγκεκριμένα γνωρίσματα (στήλες) από την αρχική σχέση, αφαιρώντας τις διπλότυπες εγγραφές."
+
+  utter_ask_selection_vs_projection:
+    - text: "Η επιλογή λειτουργεί οριζόντια απομονώνοντας γραμμές, ενώ η προβολή λειτουργεί κατακόρυφα απομονώνοντας στήλες."
+
+  utter_ask_union_constraints:
+    - text: "Οι δύο σχέσεις πρέπει να είναι συμβατές ως προς την ένωση, δηλαδή να έχουν τον ίδιο αριθμό γνωρισμάτων και τα αντίστοιχα γνωρίσματα να έχουν το ίδιο πεδίο τιμών."
+
+  utter_ask_set_difference_result:
+    - text: "Επιστρέφει τις πλειάδες που βρίσκονται στη σχέση r αλλά δεν υπάρχουν στη σχέση s."
+
+  utter_ask_cartesian_product:
+    - text: "Είναι μια πράξη που συνδυάζει κάθε πλειάδα της μιας σχέσης με κάθε πλειάδα της άλλης σχέσης."
+
+  utter_ask_cartesian_product_degree:
+    - text: "Ο βαθμός είναι το άθροισμα των βαθμών των δύο σχέσεων (n_r + n_s)."
+
+  utter_ask_rename_operation:
+    - text: "Επιτρέπει να δώσουμε ένα νέο όνομα σε μια σχέση ή στα γνωρίσματά της, διευκολύνοντας την αναφορά σε αυτά."
+
+  utter_ask_intersection_operation:
+    - text: "Επιστρέφει τις πλειάδες που υπάρχουν ταυτόχρονα και στις δύο σχέσεις r και s."
+
+  utter_ask_intersection_with_difference:
+    - text: "Η τομή εκφράζεται ως: r∩s = r − (r − s)."
+
+  utter_ask_natural_join:
+    - text: "Είναι μια πράξη που συνδέει πλειάδες από δύο σχέσεις που έχουν κοινές τιμές στα κοινά τους γνωρίσματα."
+
+  utter_ask_natural_join_no_common_attributes:
+    - text: "Σε αυτή την περίπτωση, η φυσική συνένωση ισοδυναμεί με το καρτεσιανό γινόμενο."
+
+  utter_ask_outer_join_definition:
+    - text: "Είναι επέκταση της συνένωσης που διατηρεί τις πλειάδες οι οποίες δεν βρίσκουν ταίρι στην άλλη σχέση, συμπληρώνοντας τα κενά με τιμές NULL."
+
+  utter_ask_outer_join_types:
+    - text: "Τα τρία είδη εξωτερικής συνένωσης είναι η αριστερή, η δεξιά και η πλήρης εξωτερική συνένωση."
+
+  utter_ask_left_outer_join:
+    - text: "Διατηρεί όλες τις πλειάδες της αριστερής σχέσης, ακόμα και αν δεν υπάρχει αντίστοιχη πλειάδα στη δεξιά."
+
+  utter_ask_assignment_operation:
+    - text: "Χρησιμοποιείται για την αποθήκευση ενός ενδιάμεσου αποτελέσματος σε μια προσωρινή μεταβλητή-σχέση."
+
+  utter_ask_grouping_operations:
+    - text: "Είναι πράξεις που επιτρέπουν την εφαρμογή συγκεντρωτικών συναρτήσεων στα δεδομένα μιας σχέσης."
+
+  utter_ask_aggregate_functions:
+    - text: "sum (άθροισμα), avg (μέσος όρος), count (πλήθος), min (ελάχιστο) και max (μέγιστο)."
+
+  utter_ask_grouping_in_G:
+    - text: "Οι πλειάδες χωρίζονται σε ομάδες με βάση τις τιμές συγκεκριμένων γνωρισμάτων και η συνάρτηση εφαρμόζεται σε κάθε ομάδα ξεχωριστά."
+
+  utter_ask_division_operation:
+    - text: "Χρησιμοποιείται για ερωτήματα που περιλαμβάνουν τη φράση 'για όλα' (π.χ. 'βρες τους πελάτες που έχουν λογαριασμό σε όλα τα υποκαταστήματα')."
+
+  utter_ask_relational_algebra_usage:
+    - text: "Όχι, αποτελεί τη θεωρητική βάση για την SQL και χρησιμοποιείται εσωτερικά από τα ΣΔΒΔ για τη βελτιστοποίηση των ερωτημάτων."
+
+  utter_ask_null_in_joins:
+    - text: "Επιτρέπουν την απεικόνιση πληροφορίας που λείπει, διασφαλίζοντας ότι δεν θα χαθούν δεδομένα κατά την εξωτερική συνένωση."
+
+  utter_ask_normalization_definition:
+    - text: "Είναι μια συστηματική διαδικασία ελέγχου και βελτίωσης του σχεδιασμού μιας βάσης δεδομένων για την αποφυγή πλεονασμού και ανωμαλιών."
+
+  utter_ask_normalization_goal:
+    - text: "Η ελαχιστοποίηση του πλεονασμού (redunancy) των δεδομένων και η εξάλειψη των ανωμαλιών ενημέρωσης."
+
+  utter_ask_functional_dependency:
+    - text: "Μια σχέση μεταξύ δύο γνωρισμάτων (ή συνόλων γνωρισμάτων) X→Y, όπου για κάθε τιμή του X αντιστοιχεί ακριβώς μία τιμή του Y."
+
+  utter_ask_full_functional_dependency:
+    - text: "Όταν ένα γνώρισμα Y εξαρτάται από ένα σύνθετο κλειδί X, αλλά δεν εξαρτάται από κανένα γνήσιο υποσύνολο του X."
+
+  utter_ask_partial_functional_dependency:
+    - text: "Όταν ένα γνώρισμα εξαρτάται μόνο από ένα μέρος (υποσύνολο) του πρωτεύοντος κλειδιού."
+
+  utter_ask_transitive_dependency:
+    - text: "Όταν ισχύει X→Y και Y→Z, τότε το Z εξαρτάται μεταβατικά από το X μέσω του Y."
+
+  utter_ask_anomalies:
+    - text: "Ανωμαλίες εισαγωγής (insertion), διαγραφής (deletion) και τροποποίησης (update)."
+
+  utter_ask_1nf:
+    - text: "Όταν όλες οι τιμές των γνωρισμάτων είναι ατομικές (atomic) και δεν υπάρχουν επαναλαμβανόμενες ομάδες."
+
+  utter_ask_2nf:
+    - text: "Όταν είναι σε 1NF και κάθε μη κλειδικό γνώρισμα εξαρτάται πλήρως από το πρωτεύον κλειδί (όχι μερικά)."
+
+  utter_ask_3nf:
+    - text: "Όταν είναι σε 2NF και δεν υπάρχουν μεταβατικές εξαρτήσεις μεταξύ μη κλειδικών γνωρισμάτων."
+
+  utter_ask_bcnf:
+    - text: "Μια αυστηρότερη μορφή της 3NF, όπου για κάθε λειτουργική εξάρτηση X→Y, το X πρέπει να είναι υπερκλειδί."
+
+  utter_ask_redundancy_problems:
+    - text: "Σπατάλη χώρου αποθήκευσης και κίνδυνο ασυνέπειας των δεδομένων κατά τις ενημερώσεις."
+
+  utter_ask_normalization_process:
+    - text: "Μέσω της διάσπασης (decomposition) της αρχικής σχέσης σε μικρότερες σχέσεις που ικανοποιούν τις απαιτήσεις της εκάστοτε κανονικής μορφής."
+
+  utter_ask_lossless_join:
+    - text: "Μια λανθασμένη διάσπαση που δεν επιτρέπει την επαναφορά της αρχικής σχέσης μέσω φυσικής συνένωσης."
+
+  utter_ask_prime_attribute:
+    - text: "Ένα γνώρισμα που συμμετέχει σε τουλάχιστον ένα υποψήφιο κλειδί της σχέσης."
+
+  utter_ask_3nf_vs_bcnf:
+    - text: "Στην 3NF επιτρέπεται το Y να είναι κλειδικό γνώρισμα ακόμα και αν το X δεν είναι κλειδί, ενώ στην BCNF το X πρέπει πάντα να είναι κλειδί."
+
+  utter_ask_2nf_composite_keys:
+    - text: "Επειδή αν το κλειδί είναι απλό (ένα γνώρισμα), δεν μπορεί να υπάρξει μερική εξάρτηση, οπότε η σχέση είναι αυτόματα σε 2NF."
+
+  utter_ask_deletion_anomaly:
+    - text: "Όταν η διαγραφή μιας πληροφορίας συνεπάγεται την ακούσια απώλεια μιας άλλης, άσχετης πληροφορίας."
+
+  utter_ask_insertion_anomaly:
+    - text: "Όταν δεν μπορούμε να εισάγουμε μια νέα πληροφορία επειδή λείπει κάποια άλλη που αποτελεί μέρος του κλειδιού."
+
+  utter_ask_determinant:
+    - text: "Το αριστερό μέρος (X) μιας λειτουργικής εξάρτησης X→Y."
+
+  utter_ask_normalization_always_needed:
+    - text: "Συνήθως φτάνουμε μέχρι την 3NF ή BCNF, καθώς οι υψηλότερες μορφές μπορεί να οδηγήσουν σε υπερβολικά πολλές συνενώσεις και πτώση απόδοσης."
+
+  utter_ask_recognize_transitive:
+    - text: "Όταν ένα μη κλειδικό γνώρισμα προσδιορίζει ένα άλλο μη κλειδικό γνώρισμα."
+
+  utter_ask_trivial_functional_dependency:
+    - text: "Μια εξάρτηση X→Y όπου το Y είναι υποσύνολο του X."
+
+  utter_ask_lossless_join_property:
+    - text: "Ότι η συνένωση των διασπασμένων σχέσεων θα δώσει ακριβώς την αρχική σχέση χωρίς επιπλέον λανθασμένες εγγραφές."
+
+  utter_ask_candidate_keys_bcnf:
+    - text: "Κάθε προσδιοριστής σε μια μη τετριμμένη εξάρτηση πρέπει να είναι υποψήφιο κλειδί της σχέσης."
 
   utter_default:
     - text: "Δεν κατάλαβα τελείως. Μπορείς να το ξαναδιατυπώσεις; Ρώτησέ με για: SELECT, JOIN, GROUP BY, Subqueries, Views κτλ."
