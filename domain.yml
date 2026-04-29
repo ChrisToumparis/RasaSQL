@@ -4,8 +4,6 @@ version: "3.1"
 intents:
   - greet
   - goodbye
-  - affirm
-  - deny
   - help
   - ask_select
   - ask_insert
@@ -13,12 +11,7 @@ intents:
   - ask_delete
   - ask_where
   - ask_order_by
-  - ask_like
-  - ask_distinct
   - ask_join
-  - ask_inner_join
-  - ask_left_join
-  - ask_right_join
   - ask_group_by
   - ask_having
   - ask_count
