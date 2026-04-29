@@ -5,4 +5,5 @@ RUN pip install -r requirements.txt
 COPY . .
 EXPOSE 5005
 EXPOSE 8000
+RUN rm -rf models
 CMD ["python3", "-c", "import subprocess; subprocess.Popen(['rasa', 'run', '--enable-api', '--cors', '*', '--port', '5005']); subprocess.run(['python3', '-m', 'http.server', '8000'])"]
