@@ -7,13 +7,37 @@ nlu:
     - γεια σου
     - καλημέρα
     - καλησπέρα
+    - καληνύχτα
     - χαίρετε
     - hi
     - hello
     - hey
+    - good morning
+    - good evening
+    - good night
     - γειά σου bot
     - τι κάνεις
     - ξεκινάμε
+    - αρχίζουμε
+    - πάμε
+    - ετοιμος
+    - ready
+    - geia
+    - geia sou
+    - kalimera
+    - kalispera
+    - kalinichta
+    - chairete
+    - geia sou bot
+    - ti kaneis
+    - xekiname
+    - archizoume
+    - pame
+    - etoimos
+    - kalos orises
+    - kalos ilthes
+    - yia sou
+    - yia sas
 
 - intent: goodbye
   examples: |
@@ -26,6 +50,27 @@ nlu:
     - ευχαριστώ αντίο
     - τέλος
     - κλείσιμο
+    - καληνύχτα
+    - see you later
+    - take care
+    - bye bye
+    - αντίο για τώρα
+    - τελειώνουμε
+    - σταματάμε
+    - antio
+    - ta leme
+    - fevgo
+    - efcharisto antio
+    - telos
+    - klimismo
+    - kalinichta
+    - antio gia tora
+    - teleionoume
+    - stamata
+    - kalinihta
+    - see ya
+    - farewell
+    - adios
 
 - intent: help
   examples: |
@@ -39,6 +84,31 @@ nlu:
     - δείξε μου τι μπορείς
     - οδηγίες
     - εντολές
+    - πως να ξεκινήσω
+    - τι εντολές έχεις
+    - εξήγησε μου
+    - δώσε μου πληροφορίες
+    - τι είναι αυτό
+    - πως λειτουργεί
+    - voithia
+    - ti mporeis na kaneis
+    - pos douleveis
+    - ti mporo na rotiso
+    - me ti mporeis na voithiseis
+    - ti xereis
+    - deikse mou ti mporeis
+    - odigies
+    - entoles
+    - pos na xekiniso
+    - ti entoles echeis
+    - eksigise mou
+    - dose mou plirofories
+    - ti einai afto
+    - pos leitourgei
+    - guide
+    - instructions
+    - what can you do
+    - how do you work
 
 - intent: ask_select
   examples: |
@@ -57,6 +127,36 @@ nlu:
     - πες μου για select
     - select από πίνακα
     - πως κάνω ερώτημα
+    - πως επιλέγω δεδομένα
+    - ανάκτηση από βάση
+    - select query
+    - πως κάνω select statement
+    - εξήγησε select
+    - ti einai i select
+    - pos kano select
+    - eksigise mou tin select
+    - select entoli
+    - chris select
+    - sintaksi select
+    - paradeigma select
+    - pos anakto dedomena
+    - pos diavazo apo pinaka
+    - query gia anaktesi
+    - deikse mou select
+    - select statement
+    - pes mou gia select
+    - select apo pinaka
+    - pos kano erotima
+    - pos epilego dedomena
+    - anaktesi apo vasi
+    - select query
+    - pos kano select statement
+    - eksigise select
+    - how to select data
+    - select syntax
+    - select example
+    - retrieve data
+    - read from table
 
 - intent: ask_insert
   examples: |
@@ -72,6 +172,32 @@ nlu:
     - εξήγησε insert
     - σύνταξη insert
     - insert values
+    - πως εισάγω δεδομένα
+    - insert statement
+    - προσθήκη σε πίνακα
+    - πως κάνω insert query
+    - εξήγησε insert into
+    - ti einai i insert
+    - pos prostheto dedomena
+    - insert entoli
+    - paradeigma insert
+    - pos vazo nea eggrafi
+    - prosthiki dedomenon
+    - insert into
+    - dimiourgia eggrafis
+    - pos kano insert
+    - eksigise insert
+    - sintaksi insert
+    - insert values
+    - pos eisago dedomena
+    - insert statement
+    - prosthiki se pinaka
+    - pos kano insert query
+    - eksigise insert into
+    - how to insert data
+    - insert syntax
+    - insert example
+    - add new record
 
 - intent: ask_update
   examples: |
@@ -86,6 +212,29 @@ nlu:
     - update set
     - εξήγησε update
     - σύνταξη update
+    - πως κάνω update statement
+    - αλλαγή δεδομένων
+    - update query
+    - τροποποίηση βάσης
+    - ti einai i update
+    - pos allazo dedomena
+    - update entoli
+    - tropopoiisi eggrafon
+    - pos kano update
+    - paradeigma update
+    - allagi timon
+    - enimerosi pinaka
+    - update set
+    - eksigise update
+    - sintaksi update
+    - pos kano update statement
+    - allagi dedomenon
+    - update query
+    - tropopoiisi basis
+    - how to update data
+    - update syntax
+    - update example
+    - modify records
 
 - intent: ask_delete
   examples: |
@@ -99,6 +248,30 @@ nlu:
     - delete from
     - εξήγησε delete
     - σύνταξη delete
+    - πως κάνω delete statement
+    - διαγραφή από πίνακα
+    - delete query
+    - αφαίρεση εγγραφής
+    - σύνταξη delete
+    - ti einai i delete
+    - pos diagrafoume
+    - delete entoli
+    - diagrafi eggrafon
+    - pos kano delete
+    - paradeigma delete
+    - aferesi dedomenon
+    - delete from
+    - eksigise delete
+    - sintaksi delete
+    - pos kano delete statement
+    - diagrafi apo pinaka
+    - delete query
+    - aferesi eggrafis
+    - sintaksi delete
+    - how to delete data
+    - delete syntax
+    - delete example
+    - remove records
 
 - intent: ask_where
   examples: |
@@ -108,6 +281,19 @@ nlu:
     - συνθήκες
     - παράδειγμα where
     - where εντολή
+    - ti einai i where
+    - pos filtraro
+    - where clause
+    - sinthekes
+    - paradeigma where
+    - where entoli
+    - how to filter
+    - where condition
+    - where syntax
+    - filter data
+    - where example
+    - conditional select
+    - where statement
     - πως βάζω φίλτρα
     - συνθήκη επιλογής
     - φιλτράρισμα
@@ -126,6 +312,22 @@ nlu:
     - φθίνουσα αύξουσα
     - πως κάνω sort
     - εξήγησε order by
+    - ti einai to order by
+    - pos taksinomo
+    - order by entoli
+    - taksinomisi
+    - paradeigma order by
+    - sorting
+    - desc asc
+    - fthinousa auxousa
+    - pos kano sort
+    - eksigise order by
+    - how to sort data
+    - order by syntax
+    - order by example
+    - ascending descending
+    - sort records
+    - order by clause
 
 - intent: ask_join
   examples: |
@@ -141,6 +343,23 @@ nlu:
     - πως συνδυάζω πίνακες
     - εξήγησε join
     - τύποι join
+    - ti einai to join
+    - pos kano join
+    - join entoli
+    - sindivasmos pinakon
+    - paradeigma join
+    - inner join
+    - left join
+    - right join
+    - enosi pinakon
+    - pos sindivazo pinakes
+    - eksigise join
+    - tipi join
+    - how to join tables
+    - join syntax
+    - join example
+    - table joins
+    - combine tables
 
 - intent: ask_group_by
   examples: |
@@ -154,6 +373,21 @@ nlu:
     - εξήγησε group by
     - group by σύνταξη
     - aggregate με group
+    - ti einai to group by
+    - pos kano omadopiisi
+    - group by entoli
+    - paradeigma group by
+    - omadopiisi dedomenon
+    - grouping
+    - pos omadopio
+    - eksigise group by
+    - group by sintaksi
+    - aggregate me group
+    - how to group data
+    - group by syntax
+    - group by example
+    - data grouping
+    - aggregate functions
 
 - intent: ask_having
   examples: |
@@ -166,6 +400,20 @@ nlu:
     - πως φιλτράρω μετά group by
     - εξήγησε having
     - having vs where
+    - ti einai to having
+    - having entoli
+    - paradeigma having
+    - diafora where having
+    - having clause
+    - filtrarima omadon
+    - pos filtraro meta group by
+    - eksigise having
+    - having vs where
+    - how to use having
+    - having syntax
+    - having example
+    - filter groups
+    - having clause
 
 - intent: ask_count
   examples: |
@@ -178,6 +426,20 @@ nlu:
     - count star
     - count distinct
     - εξήγησε count
+    - ti einai to count
+    - count entoli
+    - pos metro eggrafes
+    - paradeigma count
+    - count function
+    - metrisis
+    - count star
+    - count distinct
+    - eksigise count
+    - how to count records
+    - count syntax
+    - count example
+    - count function
+    - record count
 
 - intent: ask_sum
   examples: |
@@ -189,6 +451,19 @@ nlu:
     - sum function
     - συνολικό άθροισμα
     - εξήγησε sum
+    - ti einai to sum
+    - sum entoli
+    - athroisma
+    - pos athrizo
+    - paradeigma sum
+    - sum function
+    - sinoliko athroisma
+    - eksigise sum
+    - how to sum values
+    - sum syntax
+    - sum example
+    - total sum
+    - sum function
 
 - intent: ask_avg
   examples: |
@@ -200,6 +475,19 @@ nlu:
     - πως υπολογίζω μέσο όρο
     - avg function
     - εξήγησε avg
+    - ti einai to avg
+    - avg entoli
+    - mesos oros
+    - average
+    - paradeigma avg
+    - pos ipologizo meso oro
+    - avg function
+    - eksigise avg
+    - how to calculate average
+    - avg syntax
+    - avg example
+    - mean value
+    - average function
 
 - intent: ask_create_table
   examples: |
@@ -211,6 +499,19 @@ nlu:
     - νέος πίνακας
     - create table σύνταξη
     - εξήγησε create table
+    - ti einai to create table
+    - pos dimiourgo pinaka
+    - create table entoli
+    - paradeigma create table
+    - dimiourgia pinaka
+    - neos pinakas
+    - create table sintaksi
+    - eksigise create table
+    - how to create table
+    - create table syntax
+    - create table example
+    - new table
+    - table creation
 
 - intent: ask_primary_key
   examples: |
@@ -222,6 +523,19 @@ nlu:
     - pk
     - μοναδικό κλειδί
     - εξήγησε primary key
+    - ti einai to primary key
+    - primary key entoli
+    - protevon klidi
+    - paradeigma primary key
+    - pos orizo primary key
+    - pk
+    - monadiko klidi
+    - eksigise primary key
+    - what is primary key
+    - primary key definition
+    - unique identifier
+    - primary key example
+    - how to define primary key
 
 - intent: ask_foreign_key
   examples: |
@@ -233,6 +547,19 @@ nlu:
     - fk
     - σύνδεση πινάκων
     - εξήγησε foreign key
+    - ti einai to foreign key
+    - foreign key entoli
+    - kseno klidi
+    - paradeigma foreign key
+    - pos orizo foreign key
+    - fk
+    - sindesi pinakon
+    - eksigise foreign key
+    - what is foreign key
+    - foreign key definition
+    - table relationship
+    - foreign key example
+    - how to define foreign key
 
 - intent: ask_subquery
   examples: |
@@ -244,6 +571,19 @@ nlu:
     - ερώτημα μέσα σε ερώτημα
     - πως κάνω subquery
     - εξήγησε subquery
+    - ti einai to subquery
+    - subquery entoli
+    - ipoterotima
+    - paradeigma subquery
+    - nested query
+    - erotima mesa se erotima
+    - pos kano subquery
+    - eksigise subquery
+    - what is subquery
+    - subquery definition
+    - nested select
+    - subquery example
+    - how to use subquery
 
 - intent: ask_view
   examples: |
@@ -255,6 +595,19 @@ nlu:
     - εικονικός πίνακας
     - πως φτιάχνω view
     - εξήγησε view
+    - ti einai to view
+    - view entoli
+    - opsis
+    - paradeigma view
+    - create view
+    - eikonikos pinakas
+    - pos ftiachno view
+    - eksigise view
+    - what is view
+    - view definition
+    - virtual table
+    - view example
+    - how to create view
 
 - intent: ask_example
   examples: |
@@ -265,6 +618,18 @@ nlu:
     - sample query
     - code example
     - δείξε κώδικα
+    - deikse mou paradeigma
+    - thelo example
+    - ena paradeigma
+    - paradeigma kodika
+    - sample query
+    - code example
+    - deikse kodika
+    - show me an example
+    - give example
+    - code sample
+    - query example
+    - sql example
 
 - intent: ask_difference
   examples: |
@@ -274,6 +639,17 @@ nlu:
     - inner vs left join
     - σύγκριση
     - τι αλλάζει
+    - poia i diafora
+    - diafora where having
+    - where vs having
+    - inner vs left join
+    - sigkrisi
+    - ti allazei
+    - what is the difference
+    - compare where and having
+    - inner join vs left join
+    - differences
+    - how they differ
 
 - intent: ask_format_definition
   examples: |
@@ -282,6 +658,16 @@ nlu:
     - ορισμός μορφότυπου
     - τι σημαίνει format αρχείου
     - εξήγησε μορφότυπο
+    - ti orizete os morfotipo archeiou
+    - ti einai morfotipos
+    - orismos morfotipou
+    - ti simenei format archeiou
+    - eksigise morfotipo
+    - what is file format
+    - format definition
+    - file type definition
+    - explain format
+    - what does format mean
 
 - intent: ask_text_vs_binary
   examples: |
@@ -290,6 +676,16 @@ nlu:
     - πως διαβάζονται τα αρχεία κειμένου
     - διαφορά ανάγνωσης κειμένου δυαδικών
     - τι είναι δυαδικά αρχεία
+    - poia i diafora keimenou kai diadikon
+    - keimeno vs diadika archeia
+    - pos diavazontai ta archeia keimenou
+    - diafora anagnosis keimenou diadikon
+    - ti einai diadika archeia
+    - difference between text and binary
+    - text vs binary files
+    - how to read text files
+    - binary file reading
+    - what are binary files
 
 - intent: ask_text_formats_examples
   examples: |
@@ -297,6 +693,14 @@ nlu:
     - τρία παραδείγματα αρχείων κειμένου
     - ποια είναι τα formats κειμένου
     - παραδείγματα text formats
+    - dose paradeigmata morfotipon keimenou
+    - tria paradeigmata archeion keimenou
+    - poia einai ta formats keimenou
+    - paradeigmata text formats
+    - give examples of text formats
+    - three text file examples
+    - what are text formats
+    - text format examples
 
 - intent: ask_csv_characteristics
   examples: |
@@ -304,6 +708,13 @@ nlu:
     - τι είναι csv
     - εξήγησε csv αρχεία
     - πως είναι τα csv
+    - poia ta charaktiristika csv
+    - ti einai csv
+    - eksigise csv archeia
+    - pos einai ta csv
+    - what are csv characteristics
+    - csv file features
+    - explain csv
 
 - intent: ask_csv_programs
   examples: |
@@ -311,6 +722,13 @@ nlu:
     - πως ανοίγω csv
     - προγράμματα επεξεργασίας csv
     - τι χρησιμοποιώ για csv
+    - poia programma gia csv
+    - pos anoigo csv
+    - programma epeksergasias csv
+    - ti chrismopoio gia csv
+    - csv programs
+    - how to open csv
+    - csv editors
 
 - intent: ask_wordpad_disadvantages
   examples: |
@@ -318,6 +736,13 @@ nlu:
     - γιατί όχι word για καταγραφή
     - προβλήματα κειμενογράφου
     - γιατί δεν χρησιμοποιούμε word
+    - meionektimata word gia epafes
+    - giati oxi word gia katagrafi
+    - provlimata kimenografou
+    - giati den chrismopoioume word
+    - word disadvantages for contacts
+    - why not use word for data
+    - wordpad problems
 
 - intent: ask_data_recording_properties
   examples: |
@@ -325,12 +750,25 @@ nlu:
     - τι πρέπει να έχει η καταγραφή δεδομένων
     - επιθυμητές ιδιότητες βάσης δεδομένων
     - τρεις ιδιότητες καταγραφής
+    - idiotites ilektronikis katagrafis
+    - ti prepei na echei i katagrafi dedomenon
+    - epithimites idiotites basis dedomenon
+    - treis idiotites katagrafis
+    - data recording properties
+    - database properties
+    - three properties of recording
 
 - intent: ask_data_modeling
   examples: |
     - τι είναι μοντελοποίηση δεδομένων
     - εξήγησε data modeling
     - τι σημαίνει modeling δεδομένων
+    - ti einai modelopiisi dedomenon
+    - eksigise data modeling
+    - ti simenei modeling dedomenon
+    - what is data modeling
+    - explain data modeling
+    - data modeling definition
 
 - intent: ask_entity_property_representation
   examples: |
@@ -338,6 +776,13 @@ nlu:
     - οντότητα και ιδιότητα στο διάγραμμα
     - πως φαίνονται στο er diagram
     - αναπαράσταση entity property
+    - pos anaparistatai ontotita idiotita
+    - ontotita kai idiotita sto diagramma
+    - pos fainontai sto er diagram
+    - anaparastasi entity property
+    - how to represent entity and property
+    - entity property in diagram
+    - er diagram representation
 
 - intent: ask_friend_entity_definition
   examples: |
@@ -345,6 +790,13 @@ nlu:
     - ορισμός entity φίλος
     - πεδία οντότητας φίλος
     - τι έχει η οντότητα friend
+    - ti perilamvanei ontotita filos
+    - orismos entity filos
+    - pedia ontotitas filos
+    - ti echei i ontotita friend
+    - what includes friend entity
+    - friend entity definition
+    - fields of friend entity
 
 - intent: ask_sql_create_table
   examples: |
@@ -352,6 +804,13 @@ nlu:
     - πως φτιάχνω table
     - create table εντολή
     - sql για νέο πίνακα
+    - poia entoli gia dimiourgia pinaka
+    - pos ftiachno table
+    - create table entoli
+    - sql gia neo pinaka
+    - which command for table creation
+    - how to create table
+    - create table command
 
 - intent: ask_varchar_meaning
   examples: |
@@ -359,6 +818,13 @@ nlu:
     - εξήγησε varchar
     - τύπος δεδομένων varchar
     - τι είναι varchar
+    - ti simenei varchar 50
+    - eksigise varchar
+    - tipos dedomenon varchar
+    - ti einai varchar
+    - what does varchar 50 mean
+    - explain varchar
+    - varchar data type
 
 - intent: ask_primary_key_role
   examples: |
@@ -366,6 +832,13 @@ nlu:
     - τι κάνει το πρωτεύον κλειδί
     - γιατί primary key
     - εξήγησε primary key
+    - rolos primary key
+    - ti kanei to protevon klidi
+    - giati primary key
+    - eksigise primary key
+    - role of primary key
+    - what does primary key do
+    - why primary key
 
 - intent: ask_numeric_vs_text_preference
   examples: |
@@ -373,6 +846,13 @@ nlu:
     - προτίμηση numeric τύπων
     - γιατί όχι text σε αριθμούς
     - πότε χρησιμοποιούμε αριθμούς
+    - giati arithmitika anti keimenou
+    - protimisi numeric tipon
+    - giati oxi text se arithmous
+    - pote chrismopoioume arithmous
+    - why numeric over text
+    - preference for numeric types
+    - when to use numbers
 
 - intent: ask_non_numeric_examples
   examples: |
@@ -380,6 +860,13 @@ nlu:
     - τι δεν αποθηκεύουμε ως αριθμούς
     - τρία παραδείγματα non numeric
     - δεδομένα με ψηφία αλλά όχι αριθμοί
+    - paradeigmata dedomenon oxi arithmon
+    - ti den apothikevoume os arithmous
+    - tria paradeigmata non numeric
+    - dedomena me psifia alla oxi arithmoi
+    - examples of non-numeric data
+    - what not to store as numbers
+    - three non-numeric examples
 
 - intent: ask_date_storage_presentation
   examples: |
@@ -387,6 +874,13 @@ nlu:
     - αποθήκευση παρουσίαση dates
     - πως φυλάσσονται τα χρονολογικά
     - ημερομηνίες σε βάσεις
+    - pos apothikevontai imerominies
+    - apothikeusi parousiasi dates
+    - pos filassontai ta chronologika
+    - imerominies se vaseis
+    - how dates are stored
+    - date storage and presentation
+    - dates in databases
 
 - intent: ask_popular_db_systems
   examples: |
@@ -394,6 +888,13 @@ nlu:
     - ποια sites χρησιμοποιούν db
     - παραδείγματα εφαρμογών με database
     - facebook amazon wikipedia
+    - dimofili sistimata me vaseis dedomenon
+    - poia sites chrismopoioun db
+    - paradeigmata efarmogon me database
+    - facebook amazon wikipedia
+    - popular database systems
+    - sites using db
+    - database applications examples
 
 - intent: ask_global_economic_sources
   examples: |
@@ -401,6 +902,13 @@ nlu:
     - δύο πηγές οικονομικών
     - world bank eurostat
     - παγκόσμια δεδομένα οικονομίας
+    - piges pagkosmion oikonomikon dedomenon
+    - dio piges oikonomikon
+    - world bank eurostat
+    - pagkosmia dedomena oikonomias
+    - sources of global economic data
+    - two economic sources
+    - world bank eurostat
 
 - intent: ask_greek_open_data
   examples: |
@@ -413,6 +921,18 @@ nlu:
     - gov gr
     - gov.gr
     - gov
+    - pou vriko ellinika anoikta dedomena
+    - greek open data
+    - dimosia dedomena elladas
+    - data.gov.gr
+    - data gov gr
+    - datagovgr
+    - gov gr
+    - gov.gr
+    - gov
+    - where to find greek open data
+    - greek open data
+    - public data greece
 
 - intent: ask_access_environment
   examples: |
@@ -420,6 +940,13 @@ nlu:
     - γραφικό περιβάλλον microsoft access
     - τι κάνει το access
     - εξήγησε access
+    - ti prosferei access
+    - grafikο perivallon microsoft access
+    - ti kanei to access
+    - eksigise access
+    - what does access offer
+    - microsoft access environment
+    - explain access
 
 - intent: ask_excel_vs_db_difference
   examples: |
@@ -427,6 +954,13 @@ nlu:
     - excel vs database
     - γιατί όχι excel για δεδομένα
     - πότε χρησιμοποιούμε db αντί excel
+    - diafora excel kai basis dedomenon
+    - excel vs database
+    - giati oxi excel gia dedomena
+    - pote chrismopoioume db anti excel
+    - difference excel and database
+    - excel vs db
+    - why not excel for data
 
 - intent: ask_not_null_meaning
   examples: |
@@ -434,6 +968,13 @@ nlu:
     - εξήγησε not null
     - υποχρεωτικό πεδίο
     - not null σε πεδίο
+    - ti simenei not null
+    - eksigise not null
+    - ipochreotiko pedio
+    - not null se pedio
+    - what does not null mean
+    - explain not null
+    - mandatory field
 
 - intent: ask_binary_file_example
   examples: |
@@ -442,6 +983,14 @@ nlu:
     - mp3
     - mp4
     - αρχεία ήχου βίντεο
+    - paradeigma diadiko archeio
+    - ti einai binary file
+    - mp3
+    - mp4
+    - archeia ichou video
+    - example of binary file
+    - what is binary file
+    - mp3 mp4
 
 - intent: ask_binary_to_text_conversion
   examples: |
@@ -449,6 +998,13 @@ nlu:
     - μετατροπή binary σε text
     - αλλαγή τύπου αρχείου
     - binary to text
+    - mporei binary na ginei text
+    - metatropi binary se text
+    - allagi tipou archeiou
+    - binary to text
+    - can binary become text
+    - binary to text conversion
+    - change file type
 
 - intent: ask_historical_computer_name
   examples: |
@@ -459,6 +1015,17 @@ nlu:
     - ποιος υπολογιστής στην παρουσίαση
     - dsir ace
     - πρώτος υπολογιστής
+    - onoma istoriko ipologistis
+    - pios itan o protos ipologistis
+    - istorikos ipologistis
+    - onoma protou ipologistis
+    - pios ipologistis stin parousiasi
+    - dsir ace
+    - protos ipologistis
+    - name of historical computer
+    - who was the first computer
+    - historical computer
+    - first computer name
 
 - intent: ask_relational_proposer
   examples: |
@@ -467,6 +1034,15 @@ nlu:
     - Ποιος δημιούργησε το relational model;
     - Πότε προτάθηκε το σχεσιακό μοντέλο δεδομένων;
     - E.F. Codd και το σχεσιακό μοντέλο;
+    - Pios protine to sxesiako montelo dedomenon kai pote;
+    - Apo pion protathe to sxesiako montelo;
+    - Pios dimiourgise to relational model;
+    - Pote protathe to sxesiako montelo dedomenon;
+    - E.F. Codd kai to sxesiako montelo;
+    - Who proposed the relational model and when;
+    - Who created relational model;
+    - When was relational model proposed;
+    - E.F. Codd and relational model;
 
 - intent: ask_relational_structure
   examples: |
@@ -474,6 +1050,13 @@ nlu:
     - Πως οργανώνονται τα δεδομένα στο relational model;
     - Τι είναι η δομή στο σχεσιακό μοντέλο;
     - Βασική δομή δεδομένων relational;
+    - Poia einai i vasiki domi apothikeusis dedomenon sto sxesiako montelo;
+    - Pos organonontai ta dedomena sto relational model;
+    - Ti einai i domi sto sxesiako montelo;
+    - Vasiki domi dedomenon relational;
+    - What is the basic data storage structure in relational model;
+    - How are data organized in relational model;
+    - Structure in relational model;
 
 - intent: ask_attribute_definition
   examples: |
@@ -482,6 +1065,16 @@ nlu:
     - Ορισμός γνωρίσματος;
     - Τι είναι πεδίο σε βάση δεδομένων;
     - Στήλες πίνακα;
+    - Ti onomazoume «pedio» i «gnorisma» (attribute) se enan pinaka;
+    - Ti einai to attribute se pinaka;
+    - Orismos gnorismatos;
+    - Ti einai pedio se vasi dedomenon;
+    - Stiles pinaka;
+    - What is called «field» or «attribute» in a table;
+    - What is attribute in table;
+    - Definition of attribute;
+    - What is field in database;
+    - Table columns;
 
 - intent: ask_tuple_definition
   examples: |
@@ -490,6 +1083,16 @@ nlu:
     - Ορισμός tuple;
     - Τι είναι εγγραφή σε πίνακα;
     - Γραμμές πίνακα;
+    - Ti onomazoume «pliada» (tuple) i «eggrafi»;
+    - Ti einai i pliada;
+    - Orismos tuple;
+    - Ti einai eggrafi se pinaka;
+    - Grammes pinaka;
+    - What is called «tuple» or «record»;
+    - What is tuple;
+    - Definition of tuple;
+    - What is record in table;
+    - Table rows;
 
 - intent: ask_domain_definition
   examples: |
@@ -499,6 +1102,16 @@ nlu:
     - Πεδίο τιμών γνωρίσματος;
     - Επιτρεπτές τιμές γνωρίσματος;
     - Τι ορίζεται ως «πεδίο τιμών» (domain) ενός γνωρίσματος;
+    - Ti orizete os «pedio timon» (domain) enos gnorismatos;
+    - Ti einai domain enos attribute;
+    - Orismos domain;
+    - Pedio timon gnorismatos;
+    - Epitreptees times gnorismatos;
+    - What is defined as «domain» of an attribute;
+    - What is domain of attribute;
+    - Definition of domain;
+    - Value range of attribute;
+    - Allowed values of attribute;
 
 - intent: ask_relation_schema
   examples: |
@@ -506,6 +1119,13 @@ nlu:
     - Ορισμός relation schema;
     - Τι είναι το σχήμα σχέσης;
     - Σχήμα πίνακα;
+    - το σχήμα μιας σχέσης;
+    - σχήμα σχέσης;
+    - Ti einai to «sxhma mias sxesis» (relation schema);
+    - Orismos relation schema;
+    - Ti einai to sxhma sxesis;
+    - Sxhma pinaka;
+    - What is «relation schema»;
 
 - intent: ask_relation_instance
   examples: |
@@ -513,6 +1133,13 @@ nlu:
     - Ορισμός relation instance;
     - Τι είναι στιγμιότυπο σχέσης;
     - Δεδομένα σε σχέση;
+    - to στιγμιότυπο μιας σχέσης;
+    - στιγμιότυπο σχέσης;
+    - Ti einai to «stigmio typou mias sxesis» (relation instance);
+    - Orismos relation instance;
+    - Ti einai stigmio typou sxesis;
+    - Dedomena se sxesi;
+    - What is «relation instance»;
 
 - intent: ask_tuple_order
   examples: |
@@ -520,24 +1147,47 @@ nlu:
     - Έχουν σειρά οι πλειάδες;
     - Σειρά γραμμών σε πίνακα;
     - Ιδιότητα πλειάδων;
+    - Πώς χρησιμοποιούνται οι πλειάδες σε σχέση με τη σειρά τους;
+    - Poia einai i vasiki idiotita ton pliadon se mia sxesi os
+    - Exoun seira oi pliadon;
+    - Seira grammwn se pinaka;
+    - Idiotita pliadon;
+    - How are tuples ordered in a relation;
+    - Do tuples have order;
+    - Row order in table;
+    - Tuple property;
 
 - intent: ask_duplicate_tuples
   examples: |
     - Επιτρέπονται διπλότυπες πλειάδες σε μια σχέση;
     - Μπορούν να υπάρχουν διπλότυπες εγγραφές;
     - Διπλότυπες πλειάδες;
+    - Είναι επιτρεπτές οι διπλότυπες πλειάδες;
+    - Είναι επιτρεπτές οι διπλότυπες εγγραφές;
+    - Epitrepontai diplotypes pliadon se mia sxesi;
+    - Mpoun na yparxoun diplotypes eggrafes;
+    - Diplotypes pliadon;
+    - Einai epitrepptes oi diplotypes pliadon;
+    - Einai epitrepptes oi diplotypes eggrafes;
+    - Επιτρέπονται duplicates σε σχέση;
     - Επιτρέπονται duplicates;
 
 - intent: ask_superkey
   examples: |
     - Τι είναι το «υπερκλειδί» (superkey);
+    - Υπερκλειδί ορισμός;
+    - Τι είναι superkey;
+    - superkey;
     - Ορισμός superkey;
     - Τι είναι υπερκλειδί;
     - Superkey σε βάση δεδομένων;
+    - define superkey;
+    - Superkey definition;
 
 - intent: ask_candidate_key
   examples: |
     - Πώς ορίζεται το «υποψήφιο κλειδί» (candidate key);
+    - Τι είναι το candidate κλειδί;
     - Ορισμός candidate key;
     - Τι είναι υποψήφιο κλειδί;
     - Candidate key σε βάση;
@@ -561,7 +1211,17 @@ nlu:
     - Τι αντιπροσωπεύει η τιμή NULL;
     - Τι σημαίνει NULL;
     - Ορισμός NULL;
+    - NULL
+    - νθλλ
     - Τι είναι η τιμή null;
+    - Ti antiproswpevei i timi NULL;
+    - Ti simenei NULL;
+    - Orismos NULL;
+    - Ti einai i timi null;
+    - What does NULL represent;
+    - What does NULL mean;
+    - NULL definition;
+    - What is null value;
 
 - intent: ask_null_not_number
   examples: |
@@ -569,6 +1229,15 @@ nlu:
     - Γιατί NULL δεν είναι αριθμός;
     - Γιατί NULL δεν είναι κενό κείμενο;
     - Γιατί το NULL δεν είναι αριθμός ή κενό;
+    - To NULL είναι αριθμός ή κενό κείμενο;
+    - Giati i timi NULL den theoreitai arithmos i keno keimeno;
+    - Giati NULL den einai arithmos;
+    - Giati NULL den einai keno keimeno;
+    - Giati to NULL den einai arithmos i keno;
+    - Why is NULL not considered a number or empty text;
+    - Why is NULL not a number;
+    - Why is NULL not empty text;
+    - Why is NULL not a number or empty;
 
 - intent: ask_relation_schema_notation
   examples: |
@@ -576,10 +1245,18 @@ nlu:
     - Συμβολισμός σχήματος σχέσης;
     - Πως γράφουμε το schema;
     - Σημειογραφία relation schema;
+    - Pos symbolizoume to sxhma mias sxesis R me gnorismata A1, A2, ..., An;
+    - Symbolismos sxhmata sxesis;
+    - Pos grafoume to schema;
+    - Simeiografia relation schema;
+    - How do we denote the schema of a relation R with attributes A1, A2
 
 - intent: ask_primary_vs_alternate_key
   examples: |
     - Ποια είναι η διαφορά μεταξύ «πρωτεύοντος» και «εναλλακτικού» κλειδιού;
+    - εναλλακτικό κλειδί;
+    - διαφορά πρωτεύον και εναλλακτικό κλειδί;
+    - Ποια είναι η διαφορά μεταξύ primary και alternate key;
     - Διαφορά primary και alternate key;
     - Τι είναι alternate key;
     - Primary vs alternate;
@@ -1042,8 +1719,16 @@ nlu:
   examples: |
     - Πότε μια σχέση είναι στην Πρώτη Κανονική Μορφή (1NF);
     - τι είναι 1NF;
+    - 1νφ
+    - 1NF
+    - τι είναι πρώτη κανονική μορφή;
     - πρώτη κανονική μορφή;
     - 1NF ορισμός;
+    - kanoniki morfi 1NF;
+    - Pote mia sxesi einai stin Proti Kanoniki Morfi (1NF);
+    - ti einai 1NF;
+    - Proti Kanoniki Morfi;
+    - 1NF orismos;
 
 - intent: ask_2nf
   examples: |
@@ -1051,6 +1736,13 @@ nlu:
     - τι είναι 2NF;
     - δεύτερη κανονική μορφή;
     - 2NF ορισμός;
+    - 2νφ
+    - 2NF
+    - τι είναι δεύτερη κανονική μορφή;
+    - Pote mia sxesi einai stin Deuteri Kanoniki Morfi
+    - ti einai 2NF;
+    - Deuteri Kanoniki Morfi;
+    - 2NF orismos;
 
 - intent: ask_3nf
   examples: |
@@ -1058,13 +1750,42 @@ nlu:
     - τι είναι 3NF;
     - τρίτη κανονική μορφή;
     - 3NF ορισμός;
+    - 3νφ
+    - 3NF
+    - τι είναι τρίτη κανονική μορφή;
+    - Pote mia sxesi einai stin Triti Kanoniki Morfi (
+    - ti einai 3NF;
+    - Triti Kanoniki Morfi;
+    - 3NF orismos;
 
 - intent: ask_bcnf
   examples: |
-    - Τι είναι η Κανονική Μορφή Boyce-Codd (BCNF);
+    - Πότε μια σχέση είναι στην Μορφή Boyce-Codd (BCNF);
     - τι είναι BCNF;
-    - Boyce-Codd normal form;
+    - Boyce-Codd κανονική μορφή;
     - BCNF ορισμός;
+    - Pote mia sxesi einai stin Morfi Boyce-Codd (BCNF);
+    - ti einai BCNF;
+    - Boyce-Codd kanoniki morfi;
+    - BCNF orismos;
+    - When is a relation in Boyce-Codd Normal Form (BCNF);
+    - what is BCNF;
+    - Boyce-Codd normal form;
+    - BCNF definition;
+    - BCNF conditions;
+    - what makes BCNF;
+    - BCNF explanation;
+    - Pote mia sxesi einai stin Morfi Boyce-Codd (BCNF);
+    - ti einai BCNF;
+    - Boyce-Codd kanoniki morfi;
+    - BCNF orismos;
+    - τι σημαίνει BCNF;
+    - κριτήρια για BCNF;
+    - πως ορίζεται η BCNF;
+    - When is a relation in Boyce-Codd Normal Form (BCNF);
+    - what is BCNF;
+    - Boyce-Codd normal form;
+    - BCNF definition;
 
 - intent: ask_redundancy_problems
   examples: |
@@ -1072,20 +1793,62 @@ nlu:
     - προβλήματα πλεονασμού;
     - γιατί αποφεύγουμε πλεονασμό;
     - redundancy issues;
+    - Ti prokalei o pleonasmos dedomenon;
+    - provlimata pleonasmou;
+    - giati apofevgoume pleonasmos;
+    - redundancy issues;
+    - What causes data redundancy;
+    - redundancy problems;
+    - why avoid redundancy;
+    - redundancy issues;
+    - problems with redundancy;
+    - redundancy drawbacks;
+    - τι προβλήματα δημιουργεί ο πλεονασμός;
+    - γιατί είναι κακός ο πλεονασμός;
+    - συνέπειες πλεονασμού δεδομένων;
 
 - intent: ask_normalization_process
   examples: |
     - Πώς επιτυγχάνεται η κανονικοποίηση μιας σχέσης;
     - διαδικασία κανονικοποίησης;
     - πως κάνουμε normalization;
+    - βήματα κανονικοποίησης;
+    - κανονικοποίηση διαδικασία;
+    - κανονικοποίηση βήματα;
     - normalization steps;
+    - Pos epitigxanete i kanonikopiisi mias sxesis;
+    - diadikasia kanonikopiisis;
+    - pos kanoume normalization;
+    - normalization steps;
+    - How is normalization of a relation achieved;
+    - normalization process;
+    - how to do normalization;
+    - normalization steps;
+    - steps for normalization;
+    - normalization procedure;
+    - πως γίνεται η κανονικοποίηση;
+    - βήματα για normalization;
+    - διαδικασία normalization;
 
 - intent: ask_lossless_join
   examples: |
     - Τι είναι η «απώλεια πληροφορίας» κατά τη διάσπαση;
     - απώλεια πληροφορίας διάσπαση;
-    - lossless join;
     - τι είναι lossless decomposition;
+    - τι είναι το lossless join;
+    - απώλεια πληροφορίας κατά τη διάσπαση;
+    - Ti einai i «apoleia pliroforion» kata ti diaspa;
+    - apoleia pliroforion diaspa;
+    - ti einai lossless decomposition;
+    - What is information loss during decomposition;
+    - information loss decomposition;
+    - lossless join;
+    - what is lossless decomposition;
+    - decomposition without loss;
+    - lossless join property;
+    - τι σημαίνει lossless join;
+    - γιατί είναι σημαντική η lossless διάσπαση;
+    - τι εξασφαλίζει η lossless join;
 
 - intent: ask_prime_attribute
   examples: |
@@ -1093,6 +1856,19 @@ nlu:
     - κλειδικό γνώρισμα;
     - prime attribute;
     - τι είναι prime attribute;
+    - Ti einai to «klidiko gnorisma» (prime attribute);
+    - klidiko gnorisma;
+    - prime attribute;
+    - ti einai prime attribute;
+    - What is prime attribute;
+    - prime attribute;
+    - prime attribute definition;
+    - what is prime attribute;
+    - attribute in key;
+    - key attribute;
+    - τι σημαίνει κλειδικό γνώρισμα;
+    - ορισμός prime attribute;
+    - πως ορίζεται το prime attribute;
 
 - intent: ask_3nf_vs_bcnf
   examples: |
@@ -1100,6 +1876,19 @@ nlu:
     - διαφορά 3NF BCNF;
     - 3NF vs BCNF;
     - τι διαφέρει στην 3NF και BCNF;
+    - Poia einai i diafora metaksi 3NF kai BCNF;
+    - diafora 3NF BCNF;
+    - 3NF vs BCNF;
+    - ti diaferei stin 3NF kai BCNF;
+    - What is the difference between 3NF and BCNF;
+    - difference 3NF BCNF;
+    - 3NF vs BCNF;
+    - what differs in 3NF and BCNF;
+    - compare 3NF and BCNF;
+    - 3NF versus BCNF;
+    - πως διαφέρει η 3NF από την BCNF;
+    - τι επιπλέον έχει η BCNF;
+    - σύγκριση 3NF και BCNF;
 
 - intent: ask_2nf_composite_keys
   examples: |
@@ -1107,6 +1896,19 @@ nlu:
     - 2NF και σύνθετα κλειδιά;
     - γιατί 2NF για composite keys;
     - 2NF composite keys;
+    - τι σχέση έχει η 2NF με τα σύνθετα κλειδιά;
+    - γιατί τα composite keys στην 2NF;
+    - σημασία σύνθετων κλειδιών για 2NF;
+    - Giati i 2NF afora kirios sxeseis me sintheta klidia;
+    - 2NF kai sintheta klidia;
+    - giati 2NF gia composite keys;
+    - 2NF composite keys;
+    - Why does 2NF mainly concern relations with composite keys;
+    - 2NF and composite keys;
+    - why 2NF for composite keys;
+    - 2NF composite keys;
+    - 2NF relevance to composite;
+    - composite keys in 2NF;
 
 - intent: ask_deletion_anomaly
   examples: |
@@ -1114,6 +1916,19 @@ nlu:
     - ανωμαλία διαγραφής;
     - deletion anomaly;
     - τι είναι deletion anomaly;
+    - τι προκαλεί η ανωμαλία διαγραφής;
+    - προβλήματα κατά τη διαγραφή;
+    - γιατί υπάρχει deletion anomaly;
+    - Poio einai to provlima tis anomalias diagrafis;
+    - anomalia diagrafis;
+    - deletion anomaly;
+    - ti einai deletion anomaly;
+    - What is the problem of deletion anomaly;
+    - deletion anomaly;
+    - deletion anomaly issue;
+    - what is deletion anomaly;
+    - anomaly when deleting;
+    - delete anomaly;
 
 - intent: ask_insertion_anomaly
   examples: |
@@ -1121,6 +1936,19 @@ nlu:
     - ανωμαλία εισαγωγής;
     - insertion anomaly;
     - τι είναι insertion anomaly;
+    - τι συμβαίνει στην ανωμαλία εισαγωγής;
+    - προβλήματα κατά την εισαγωγή δεδομένων;
+    - γιατί υπάρχει insertion anomaly;
+    - Poio einai to provlima tis anomalias eisagogis;
+    - anomalia eisagogis;
+    - insertion anomaly;
+    - ti einai insertion anomaly;
+    - What is the problem of insertion anomaly;
+    - insertion anomaly;
+    - insertion anomaly issue;
+    - what is insertion anomaly;
+    - anomaly when inserting;
+    - insert anomaly;
 
 - intent: ask_determinant
   examples: |
@@ -1128,6 +1956,19 @@ nlu:
     - προσδιοριστής;
     - determinant;
     - τι είναι determinant;
+    - τι σημαίνει determinant σε FD;
+    - ορισμός προσδιοριστή;
+    - πως ορίζεται ο determinant;
+    - Ti einai o «prosdiotistis» (determinant);
+    - prosdiotistis;
+    - determinant;
+    - ti einai determinant;
+    - What is the determinant;
+    - determinant;
+    - determinant definition;
+    - what is determinant;
+    - functional dependency determinant;
+    - left side of FD;
 
 - intent: ask_normalization_always_needed
   examples: |
@@ -1135,6 +1976,19 @@ nlu:
     - πάντα μέχρι BCNF;
     - χρειαζόμαστε πάντα normalization;
     - μέχρι ποιο βαθμό normalization;
+    - πρέπει πάντα να φτάνουμε μέχρι BCNF;
+    - είναι υποχρεωτική η μέγιστη κανονικοποίηση;
+    - πότε σταματάμε την normalization;
+    - Einai i kanonikopiisi panda aparaititi mexri ton megisto vathmo;
+    - panda mexri BCNF;
+    - chreiazomaste panda normalization;
+    - mexri poio vathmo normalization;
+    - Is normalization always necessary up to the maximum degree;
+    - always up to BCNF;
+    - do we always need normalization;
+    - up to what degree normalization;
+    - when to stop normalization;
+    - maximum normalization level;
 
 - intent: ask_recognize_transitive
   examples: |
@@ -1142,6 +1996,19 @@ nlu:
     - πως βρίσκουμε transitive dependency;
     - αναγνώριση transitive;
     - πώς ξέρουμε αν είναι transitive;
+    - πως εντοπίζουμε μεταβατική εξάρτηση;
+    - κριτήρια για transitive dependency;
+    - πως καταλαβαίνουμε αν είναι transitive;
+    - Pos anagnorizoume mia metavatici eksartisi;
+    - pos vriskoume transitive dependency;
+    - anagnorisi transitive;
+    - pos xeroume an einai transitive;
+    - How do we recognize a transitive dependency;
+    - how to find transitive dependency;
+    - recognizing transitive;
+    - how to know if it's transitive;
+    - transitive dependency identification;
+    - spotting transitive dependencies;
 
 - intent: ask_trivial_functional_dependency
   examples: |
@@ -1149,6 +2016,19 @@ nlu:
     - τετριμμένη FD;
     - trivial functional dependency;
     - τι είναι trivial FD;
+    - τι σημαίνει τετριμμένη FD;
+    - γιατί ονομάζεται trivial;
+    - παραδείγματα trivial functional dependencies;
+    - Ti onomazoume «tetrimenti leitourgiki eksartisi»;
+    - tetrimenti FD;
+    - trivial functional dependency;
+    - ti einai trivial FD;
+    - What is called trivial functional dependency;
+    - trivial FD;
+    - trivial functional dependency;
+    - what is trivial FD;
+    - definition of trivial FD;
+    - trivial dependency;
 
 - intent: ask_lossless_join_property
   examples: |
@@ -1156,6 +2036,19 @@ nlu:
     - lossless join property;
     - τι κάνει lossless join;
     - ιδιότητα lossless;
+    - τι εξασφαλίζει η ιδιότητα lossless join;
+    - γιατί είναι σημαντική η lossless join;
+    - τι σημαίνει lossless join property;
+    - Ti diasfalizei i idiotita tis «sinenosis choris apoleia» (lossless join);
+    - lossless join property;
+    - ti kanei lossless join;
+    - idiotita lossless;
+    - What does the lossless join property ensure;
+    - lossless join property;
+    - what does lossless join do;
+    - lossless property;
+    - importance of lossless join;
+    - lossless decomposition property;
 
 - intent: ask_candidate_keys_bcnf
   examples: |
@@ -1163,3 +2056,17 @@ nlu:
     - υποψήφια κλειδιά BCNF;
     - candidate keys in BCNF;
     - ρόλος candidate keys BCNF;
+    - τι ρόλο παίζουν τα υποψήφια κλειδιά στην BCNF;
+    - υποψήφια κλειδιά και BCNF;
+    - πως επηρεάζουν τα candidate keys την BCNF;
+    - γιατί τα candidate keys στην BCNF;
+    - Pios einai o rolos ton ipsifion klidion stin BCNF;
+    - ipsifia klidia BCNF;
+    - candidate keys in BCNF;
+    - rolos candidate keys BCNF;
+    - What is the role of candidate keys in BCNF;
+    - candidate keys BCNF;
+    - role of candidate keys in BCNF;
+    - how candidate keys relate to BCNF;
+    - BCNF and candidate keys;
+    - importance of candidate keys for BCNF;
