@@ -10,7 +10,7 @@ echo "[1/5] Έλεγχος Python version..."
 if ! command -v python3.10 &> /dev/null; then
     echo "[X] ERROR: Δεν βρέθηκε Python3!"
     echo ""
-    echo "Εγκατάστησε Python 3.10:"
+    echo "Εγκατάστησε Python 3.8, 3.9, ή 3.10:"
     echo "  Mac: brew install python@3.10"
     echo "  Ubuntu: sudo apt install python3.10"
     exit 1

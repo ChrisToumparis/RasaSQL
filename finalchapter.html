@@ -1,0 +1,686 @@
+<!DOCTYPE html>
+<html lang="el">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Όλα τα Κεφάλαια - SQL Learning</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;600&family=Karla:wght@400;700&family=Playfair+Display:wght@700;900&display=swap" rel="stylesheet">
+    <style>
+        .chapter-page {
+            max-width: 900px;
+            margin: 6rem auto 3rem;
+            padding: 0 2rem;
+        }
+        
+        .chapter-header {
+            margin-bottom: 3rem;
+        }
+        
+        .chapter-number {
+            font-family: var(--font-mono);
+            color: var(--primary);
+            font-size: 0.9rem;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+        }
+        
+        .chapter-title-main {
+            font-family: var(--font-display);
+            font-size: 2.5rem;
+            color: var(--text-primary);
+            margin-bottom: 1rem;
+            line-height: 1.2;
+        }
+        
+        .chapter-intro {
+            font-size: 1.125rem;
+            color: var(--text-secondary);
+            line-height: 1.8;
+            margin-bottom: 2rem;
+        }
+        
+        .chapter-content h2 {
+            font-family: var(--font-display);
+            font-size: 1.75rem;
+            color: var(--text-primary);
+            margin: 2.5rem 0 1rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 2px solid var(--border);
+        }
+        
+        .chapter-content h3 {
+            font-size: 1.25rem;
+            color: var(--text-primary);
+            margin: 2rem 0 1rem;
+            font-weight: 600;
+        }
+        
+        .chapter-content p {
+            line-height: 1.8;
+            margin-bottom: 1.5rem;
+            color: var(--text-secondary);
+        }
+        
+        .table-wrapper {
+            overflow-x: auto;
+            margin: 2rem 0;
+        }
+        
+        .data-table {
+            width: 100%;
+            border-collapse: collapse;
+            background: white;
+            border-radius: var(--radius-md);
+            overflow: hidden;
+            box-shadow: 0 2px 8px var(--shadow);
+        }
+        
+        .data-table thead {
+            background: var(--primary);
+            color: white;
+        }
+        
+        .data-table th,
+        .data-table td {
+            padding: 1rem;
+            text-align: left;
+            border-bottom: 1px solid var(--border);
+        }
+        
+        .data-table th {
+            font-weight: 600;
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+        
+        .data-table tbody tr:hover {
+            background: var(--bg-secondary);
+        }
+        
+        .code-example {
+            background: var(--bg-dark);
+            color: #e2e8f0;
+            padding: 1.5rem;
+            border-radius: var(--radius-md);
+            margin: 1.5rem 0;
+            overflow-x: auto;
+        }
+        
+        .code-example code {
+            font-family: var(--font-mono);
+            font-size: 0.9rem;
+            line-height: 1.6;
+        }
+        
+        .info-box {
+            background: var(--primary-light);
+            border-left: 4px solid var(--primary);
+            padding: 1.5rem;
+            margin: 2rem 0;
+            border-radius: var(--radius-sm);
+        }
+        
+        .info-box strong {
+            color: var(--primary);
+            display: block;
+            margin-bottom: 0.5rem;
+        }
+        
+        .chapter-nav {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 4rem;
+            padding-top: 2rem;
+            border-top: 2px solid var(--border);
+        }
+        
+        .nav-button {
+            padding: 1rem 2rem;
+            background: var(--primary);
+            color: white;
+            text-decoration: none;
+            border-radius: var(--radius-md);
+            font-weight: 600;
+            transition: all var(--transition-base);
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        
+        .nav-button:hover {
+            background: var(--primary-dark);
+            transform: translateY(-2px);
+        }
+        
+        .nav-button.disabled {
+            background: var(--border);
+            pointer-events: none;
+            color: var(--text-muted);
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="nav">
+        <div class="nav-container">
+            <div class="nav-brand">
+                <span class="nav-icon">{ SQL }</span>
+                <span class="nav-title">Εκπαίδευση SQL</span>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="index.html" class="nav-link">Αρχική</a></li>
+                <li><a href="index.html#chapters" class="nav-link active">Κεφάλαια</a></li>
+                <li><a href="index.html#examples" class="nav-link">Παραδείγματα</a></li>
+                <li><a href="index.html#about" class="nav-link">Σχετικά</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Chapter Content -->
+    <div class="chapter-page">
+        <div class="chapter-header">
+            <div class="chapter-number">ΟΛΑ ΤΑ ΚΕΦΑΛΑΙΑ</div>
+            <h1 class="chapter-title-main">Πλήρης Εκπαίδευση SQL</h1>
+            <p class="chapter-intro">
+                Όλα τα κεφάλαια σε μία σελίδα για εύκολη ανάγνωση και αναφορά.
+            </p>
+        </div>
+
+        <div class="chapter-content">
+            
+            <!-- Chapter 1: Εισαγωγή -->
+            <h1 style="border-top: 4px solid var(--primary); padding-top: 2rem; margin-top: 4rem;">Εισαγωγή</h1>
+            <h2>1.1 Τι είναι η SQL;</h2>
+            
+            <p>
+                Η <strong>SQL (Structured Query Language)</strong> είναι η γλώσσα δομημένων ερωτημάτων 
+                που χρησιμοποιείται για τη διαχείριση και τον χειρισμό σχεσιακών βάσεων δεδομένων. 
+                Αποτελεί παγκόσμιο πρότυπο και είναι μία από τις πιο σημαντικές γλώσσες στον τομέα 
+                της πληροφορικής.
+            </p>
+
+            <div class="info-box">
+                <strong>💡 Γιατί SQL;</strong>
+                Η SQL είναι απαραίτητη για την ανάκτηση, τροποποίηση και διαχείριση δεδομένων 
+                σε σχεσιακές βάσεις δεδομένων όπως η MySQL, PostgreSQL, Oracle, SQL Server και άλλες.
+            </div>
+
+            <h3>Βασικά Χαρακτηριστικά της SQL:</h3>
+            <ul style="line-height: 2; color: var(--text-secondary); margin-bottom: 2rem;">
+                <li>📊 <strong>Ανάκτηση Δεδομένων</strong> - Με ερωτήματα SELECT</li>
+                <li>✏️ <strong>Τροποποίηση Δεδομένων</strong> - INSERT, UPDATE, DELETE</li>
+                <li>🏗️ <strong>Ορισμός Δομής</strong> - CREATE, ALTER, DROP</li>
+                <li>🔒 <strong>Έλεγχος Πρόσβασης</strong> - GRANT, REVOKE</li>
+            </ul>
+
+            <h2>1.2 Βάση Δεδομένων "World"</h2>
+            
+            <p>
+                Στα παραδείγματα που θα δούμε χρησιμοποιείται η βάση δεδομένων <strong>world</strong>, 
+                η οποία περιέχει στατιστικά στοιχεία για χώρες και πόλεις. Αποτελείται από τρεις πίνακες:
+            </p>
+
+            <h3>📊 Πίνακες της Βάσης World</h3>
+
+            <div class="table-wrapper">
+                <table class="data-table">
+                    <thead>
+                        <tr>
+                            <th>Πίνακας</th>
+                            <th>Περιγραφή</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><code>Country</code></td>
+                            <td>Περιέχει πληροφορίες για κάθε χώρα</td>
+                        </tr>
+                        <tr>
+                            <td><code>City</code></td>
+                            <td>Περιέχει πληροφορίες για κάθε πόλη</td>
+                        </tr>
+                        <tr>
+                            <td><code>CountryLanguage</code></td>
+                            <td>Περιέχει τις γλώσσες που ομιλούνται σε κάθε χώρα</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <h3>🏙️ Πίνακας City</h3>
+            
+            <div class="table-wrapper">
+                <table class="data-table">
+                    <thead>
+                        <tr>
+                            <th>Πεδίο</th>
+                            <th>Περιγραφή</th>
+                            <th>Τύπος Δεδομένων</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><code>ID</code></td>
+                            <td>Κωδικός πόλης</td>
+                            <td>int</td>
+                        </tr>
+                        <tr>
+                            <td><code>Name</code></td>
+                            <td>Όνομα πόλης</td>
+                            <td>char(35)</td>
+                        </tr>
+                        <tr>
+                            <td><code>CountryCode</code></td>
+                            <td>Κωδικός Χώρας</td>
+                            <td>char(3)</td>
+                        </tr>
+                        <tr>
+                            <td><code>District</code></td>
+                            <td>Περιοχή που βρίσκεται η πόλη</td>
+                            <td>char(20)</td>
+                        </tr>
+                        <tr>
+                            <td><code>Population</code></td>
+                            <td>Πληθυσμός</td>
+                            <td>int</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <h3>🌍 Πίνακας Country</h3>
+            
+            <div class="table-wrapper">
+                <table class="data-table">
+                    <thead>
+                        <tr>
+                            <th>Πεδίο</th>
+                            <th>Περιγραφή</th>
+                            <th>Τύπος Δεδομένων</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><code>Code</code></td>
+                            <td>Τριψήφιος κωδικός χώρας</td>
+                            <td>char(3)</td>
+                        </tr>
+                        <tr>
+                            <td><code>Name</code></td>
+                            <td>Όνομα χώρας</td>
+                            <td>char(52)</td>
+                        </tr>
+                        <tr>
+                            <td><code>Continent</code></td>
+                            <td>Ήπειρος</td>
+                            <td>enum</td>
+                        </tr>
+                        <tr>
+                            <td><code>Region</code></td>
+                            <td>Περιοχή</td>
+                            <td>char(26)</td>
+                        </tr>
+                        <tr>
+                            <td><code>Population</code></td>
+                            <td>Πληθυσμός</td>
+                            <td>int</td>
+                        </tr>
+                        <tr>
+                            <td><code>Capital</code></td>
+                            <td>Πρωτεύουσα</td>
+                            <td>int</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <h3>🗣️ Πίνακας CountryLanguage</h3>
+            
+            <div class="table-wrapper">
+                <table class="data-table">
+                    <thead>
+                        <tr>
+                            <th>Πεδίο</th>
+                            <th>Περιγραφή</th>
+                            <th>Τύπος Δεδομένων</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><code>CountryCode</code></td>
+                            <td>Κωδικός χώρας</td>
+                            <td>char(3)</td>
+                        </tr>
+                        <tr>
+                            <td><code>Language</code></td>
+                            <td>Γλώσσα</td>
+                            <td>char(30)</td>
+                        </tr>
+                        <tr>
+                            <td><code>IsOfficial</code></td>
+                            <td>Αν είναι επίσημη ή όχι</td>
+                            <td>enum('T','F')</td>
+                        </tr>
+                        <tr>
+                            <td><code>Percentage</code></td>
+                            <td>Ποσοστό πληθυσμού που την ομιλάει</td>
+                            <td>float(4,1)</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="info-box">
+                <strong>📝 Σημείωση</strong>
+                Αυτή η βάση δεδομένων θα χρησιμοποιηθεί σε όλα τα παραδείγματα των επόμενων κεφαλαίων. 
+                Είναι σημαντικό να κατανοήσεις τη δομή των πινάκων και τις σχέσεις μεταξύ τους.
+            </div>
+
+            <h2>🔗 Σχέσεις Πινάκων</h2>
+            
+            <p>
+                Οι πίνακες συνδέονται μεταξύ τους μέσω των εξής πεδίων:
+            </p>
+
+            <ul style="line-height: 2; color: var(--text-secondary); margin-bottom: 2rem;">
+                <li><strong>Country.Code</strong> ↔ <strong>City.CountryCode</strong></li>
+                <li><strong>Country.Code</strong> ↔ <strong>CountryLanguage.CountryCode</strong></li>
+                <li><strong>Country.Capital</strong> ↔ <strong>City.ID</strong></li>
+            </ul>
+
+            <p>
+                Αυτές οι σχέσεις μας επιτρέπουν να συνδυάσουμε δεδομένα από πολλούς πίνακες 
+                χρησιμοποιώντας <strong>JOINs</strong>, όπως θα δούμε σε επόμενα κεφάλαια.
+            </p>
+
+            <!-- Chapter 2: Η SQL και η MySQL -->
+            <h1 style="border-top: 4px solid var(--primary); padding-top: 2rem; margin-top: 4rem;">Η SQL και η MySQL</h1>
+            <h2>2.1 Η SQL</h2>
+            <p>Η <strong>SQL (Structured Query Language)</strong> αποτελεί ένα παγκόσμιο πρότυπο για τον χειρισμό Σχεσιακών Βάσεων Δεδομένων. Αρχικά ονομαζόταν SEQUEL και υλοποιήθηκε για το System R της IBM.</p>
+            
+            <div class="info-box">
+                <strong>📚 Ιστορία</strong>
+                Η πρώτη τυποποιημένη έκδοση (SQL1) δημιουργήθηκε το 1986. Ακολούθησε η SQL2 (1992) και η SQL3/SQL-99 με αντικειμενοστραφή στοιχεία.
+            </div>
+            
+            <h2>2.2 Η MySQL</h2>
+            <p>Η MySQL είναι ένα από τα πιο δημοφιλή συστήματα διαχείρισης βάσεων δεδομένων. Βασικά χαρακτηριστικά:</p>
+            <ul style="line-height: 2; color: var(--text-secondary);">
+                <li>✅ Open Source (ανοιχτού κώδικα)</li>
+                <li>⚡ Γρήγορη και αξιόπιστη</li>
+                <li>🌐 Cross-platform (Windows, Linux, Mac)</li>
+                <li>📖 Εξαιρετική τεκμηρίωση</li>
+            </ul>
+            
+            <h2>2.3 Πίνακες</h2>
+            <p>Οι πίνακες (tables) είναι οι βασικές δομές αποθήκευσης δεδομένων. Κάθε πίνακας αποτελείται από:</p>
+            <ul style="line-height: 2; color: var(--text-secondary);">
+                <li>📝 <strong>Γραμμές (Rows)</strong> - Εγγραφές/Records</li>
+                <li>📊 <strong>Στήλες (Columns)</strong> - Πεδία/Fields</li>
+            </ul>
+            
+            <h2>2.4 Τύποι Δεδομένων</h2>
+            <div class="table-wrapper">
+                <table class="data-table">
+                    <thead>
+                        <tr><th>Τύπος</th><th>Περιγραφή</th><th>Παράδειγμα</th></tr>
+                    </thead>
+                    <tbody>
+                        <tr><td><code>INT</code></td><td>Ακέραιοι αριθμοί</td><td>25, -10, 0</td></tr>
+                        <tr><td><code>VARCHAR(n)</code></td><td>Κείμενο μεταβλητού μήκους</td><td>'Γεια σου'</td></tr>
+                        <tr><td><code>CHAR(n)</code></td><td>Κείμενο σταθερού μήκους</td><td>'GR', 'USA'</td></tr>
+                        <tr><td><code>DATE</code></td><td>Ημερομηνία</td><td>'2025-12-13'</td></tr>
+                        <tr><td><code>FLOAT</code></td><td>Δεκαδικοί αριθμοί</td><td>3.14, 99.99</td></tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <!-- Chapter 3: Ερωτήματα Επιλογής -->
+            <h1 style="border-top: 4px solid var(--primary); padding-top: 2rem; margin-top: 4rem;">Ερωτήματα Επιλογής</h1>
+            <h2>3.1 Η Εντολή SELECT</h2>
+            <p>Η <strong>SELECT</strong> είναι η βασικότερη εντολή της SQL για ανάκτηση δεδομένων.</p>
+            
+            <div class="code-example"><code>-- Επιλογή όλων των πεδίων
+SELECT * FROM City;
+
+-- Επιλογή συγκεκριμένων πεδίων
+SELECT Name, Population FROM City;</code></div>
+            
+            <h2>3.2 WHERE - Φιλτράρισμα Δεδομένων</h2>
+            <p>Η πρόταση WHERE χρησιμοποιείται για φιλτράρισμα εγγραφών:</p>
+            
+            <div class="code-example"><code>SELECT * FROM City 
+WHERE Population > 1000000;</code></div>
+            
+            <h3>Τελεστές Σύγκρισης:</h3>
+            <ul style="line-height: 2; color: var(--text-secondary);">
+                <li><code>=</code> Ίσο</li>
+                <li><code>></code> Μεγαλύτερο</li>
+                <li><code><</code> Μικρότερο</li>
+                <li><code>>=</code> Μεγαλύτερο ή ίσο</li>
+                <li><code><=</code> Μικρότερο ή ίσο</li>
+                <li><code><></code> ή <code>!=</code> Διάφορο</li>
+            </ul>
+            
+            <h2>3.3 ORDER BY - Ταξινόμηση</h2>
+            <div class="code-example"><code>-- Αύξουσα (ASC - default)
+SELECT Name FROM City 
+ORDER BY Population ASC;
+
+-- Φθίνουσα (DESC)
+SELECT Name FROM City 
+ORDER BY Population DESC;</code></div>
+            
+            <h2>3.4 LIKE - Pattern Matching</h2>
+            <p>Για αναζήτηση με μοτίβα χρησιμοποιούμε LIKE:</p>
+            <div class="code-example"><code>-- Πόλεις που αρχίζουν με 'A'
+SELECT Name FROM City 
+WHERE Name LIKE 'A%';
+
+-- Πόλεις που τελειώνουν σε 'ς'
+SELECT Name FROM City 
+WHERE Name LIKE '%ς';
+
+-- Όνομα περιέχει 'θην'
+SELECT Name FROM City 
+WHERE Name LIKE '%θην%';</code></div>
+            
+            <h2>3.5 DISTINCT - Μοναδικές Τιμές</h2>
+            <div class="code-example"><code>-- Όλες οι ηπείρους (χωρίς επαναλήψεις)
+SELECT DISTINCT Continent FROM Country;</code></div>
+            
+            <h2>3.6 LIMIT - Περιορισμός Αποτελεσμάτων</h2>
+            <div class="code-example"><code>-- Μόνο τις 10 πρώτες εγγραφές
+SELECT * FROM City LIMIT 10;
+
+-- Από τη 20η έως τη 30η εγγραφή
+SELECT * FROM City LIMIT 20, 10;</code></div>
+
+            <!-- Chapter 4: Συνδυαστικές Συναρτήσεις -->
+            <h1 style="border-top: 4px solid var(--primary); padding-top: 2rem; margin-top: 4rem;">Συνδυαστικές Συναρτήσεις</h1>
+            <h2>4.1 COUNT - Καταμέτρηση Εγγραφών</h2>
+            <p>Η συνάρτηση <strong>COUNT()</strong> μετράει τον αριθμό των εγγραφών:</p>
+            <div class="code-example"><code>-- Πλήθος πόλεων
+SELECT COUNT(*) FROM City;
+
+-- Πλήθος μοναδικών χωρών
+SELECT COUNT(DISTINCT CountryCode) FROM City;</code></div>
+            
+            <h2>4.2 SUM και AVG - Άθροισμα & Μέσος Όρος</h2>
+            <div class="code-example"><code>-- Συνολικός πληθυσμός
+SELECT SUM(Population) FROM Country;
+
+-- Μέσος πληθυσμός
+SELECT AVG(Population) FROM Country;</code></div>
+            
+            <h2>4.3 MIN και MAX</h2>
+            <div class="code-example"><code>-- Μικρότερος και μεγαλύτερος πληθυσμός
+SELECT MIN(Population), MAX(Population) FROM City;</code></div>
+            
+            <h2>4.4 GROUP BY - Ομαδοποίηση</h2>
+            <p>Ομαδοποιούμε δεδομένα για στατιστικά ανά κατηγορία:</p>
+            <div class="code-example"><code>-- Πλήθος χωρών ανά ήπειρο
+SELECT Continent, COUNT(*) 
+FROM Country 
+GROUP BY Continent;
+
+-- Μέσος πληθυσμός ανά ήπειρο
+SELECT Continent, AVG(Population)
+FROM Country
+GROUP BY Continent;</code></div>
+            
+            <h2>4.5 HAVING - Φιλτράρισμα Ομάδων</h2>
+            <p>Το <strong>HAVING</strong> λειτουργεί σαν WHERE αλλά για ομάδες:</p>
+            <div class="code-example"><code>-- Ηπείρους με >10 χώρες
+SELECT Continent, COUNT(*)
+FROM Country
+GROUP BY Continent
+HAVING COUNT(*) > 10;</code></div>
+            
+            <div class="info-box">
+                <strong>📊 WHERE vs HAVING</strong>
+                WHERE = φιλτράρει εγγραφές ΠΡΙΝ το GROUP BY<br>
+                HAVING = φιλτράρει ομάδες ΜΕΤΑ το GROUP BY
+            </div>
+
+            <!-- Chapter 5: Ορισμός & Διαχείριση Δεδομένων -->
+            <h1 style="border-top: 4px solid var(--primary); padding-top: 2rem; margin-top: 4rem;">Ορισμός & Διαχείριση Δεδομένων</h1>
+            <h2>5.1 CREATE DATABASE - Δημιουργία Βάσης</h2>
+            <div class="code-example"><code>CREATE DATABASE mydb;</code></div>
+            
+            <h2>5.2 CREATE TABLE - Δημιουργία Πίνακα</h2>
+            <div class="code-example"><code>CREATE TABLE students (
+    id INT PRIMARY KEY AUTO_INCREMENT,
+    name VARCHAR(50) NOT NULL,
+    age INT,
+    email VARCHAR(100)
+);</code></div>
+            
+            <h2>5.3 PRIMARY KEY - Πρωτεύον Κλειδί</h2>
+            <p>Το <strong>PRIMARY KEY</strong> αναγνωρίζει μοναδικά κάθε εγγραφή:</p>
+            <ul style="line-height: 2; color: var(--text-secondary);">
+                <li>✅ Μοναδική τιμή για κάθε εγγραφή</li>
+                <li>✅ Δεν επιτρέπει NULL</li>
+                <li>✅ Ένα μόνο PRIMARY KEY ανά πίνακα</li>
+            </ul>
+            
+            <h2>5.4 FOREIGN KEY - Ξένο Κλειδί</h2>
+            <div class="code-example"><code>CREATE TABLE grades (
+    id INT PRIMARY KEY,
+    student_id INT,
+    grade FLOAT,
+    FOREIGN KEY (student_id) REFERENCES students(id)
+);</code></div>
+            
+            <div class="info-box">
+                <strong>🔗 Foreign Key</strong>
+                Συνδέει δύο πίνακες και διασφαλίζει την ακεραιότητα των δεδομένων.
+            </div>
+            
+            <h2>5.5 ALTER TABLE - Τροποποίηση Πίνακα</h2>
+            <div class="code-example"><code>-- Προσθήκη πεδίου
+ALTER TABLE students ADD phone VARCHAR(15);
+
+-- Διαγραφή πεδίου
+ALTER TABLE students DROP COLUMN phone;
+
+-- Τροποποίηση πεδίου
+ALTER TABLE students MODIFY age SMALLINT;</code></div>
+            
+            <h2>5.6 DROP TABLE - Διαγραφή Πίνακα</h2>
+            <div class="code-example"><code>DROP TABLE students;</code></div>
+            
+            <div class="info-box">
+                <strong>⚠️ ΠΡΟΣΟΧΗ</strong>
+                Η DROP διαγράφει ΜΟΝΙΜΑ τον πίνακα και όλα τα δεδομένα του!
+            </div>
+
+            <!-- Chapter 6: Χειρισμός Δεδομένων -->
+            <h1 style="border-top: 4px solid var(--primary); padding-top: 2rem; margin-top: 4rem;">Χειρισμός Δεδομένων</h1>
+            <h2>6.1 INSERT - Εισαγωγή Δεδομένων</h2>
+            <div class="code-example"><code>INSERT INTO students (name, age) VALUES ('Νίκος', 22);</code></div>
+            <h2>6.2 UPDATE - Ενημέρωση</h2>
+            <div class="code-example"><code>UPDATE students SET age = 23 WHERE name = 'Νίκος';</code></div>
+            <h2>6.3 DELETE - Διαγραφή</h2>
+            <div class="code-example"><code>DELETE FROM students WHERE age < 18;</code></div>
+            <div class="info-box"><strong>⚠️ ΠΡΟΣΟΧΗ</strong>Χωρίς WHERE, θα διαγραφούν ΟΛΕΣ οι εγγραφές!</div>
+
+            <!-- Chapter 7: Ένωση Πινάκων -->
+            <h1 style="border-top: 4px solid var(--primary); padding-top: 2rem; margin-top: 4rem;">Ένωση Πινάκων</h1>
+            <h2>7.1 INNER JOIN</h2>
+            <div class="code-example"><code>SELECT City.Name, Country.Name
+FROM City
+INNER JOIN Country ON City.CountryCode = Country.Code;</code></div>
+            <h2>7.2 LEFT JOIN</h2>
+            <div class="code-example"><code>SELECT * FROM Country
+LEFT JOIN City ON Country.Code = City.CountryCode;</code></div>
+            <h2>7.3 RIGHT JOIN</h2>
+            <p>Όπως το LEFT αλλά επιστρέφει όλες τις εγγραφές από τον δεξί πίνακα.</p>
+
+            <!-- Chapter 8: Υποερωτήματα -->
+            <h1 style="border-top: 4px solid var(--primary); padding-top: 2rem; margin-top: 4rem;">Υποερωτήματα</h1>
+            <h2>8.1 Απλό Υποερώτημα</h2>
+            <div class="code-example"><code>SELECT Name FROM Country
+WHERE Population > (SELECT AVG(Population) FROM Country);</code></div>
+            <h2>8.2 IN με Υποερώτημα</h2>
+            <div class="code-example"><code>SELECT Name FROM City
+WHERE CountryCode IN (
+    SELECT Code FROM Country WHERE Continent = 'Europe'
+);</code></div>
+            <h2>8.3 EXISTS</h2>
+            <div class="code-example"><code>SELECT Name FROM Country
+WHERE EXISTS (SELECT * FROM City WHERE CountryCode = Country.Code);</code></div>
+
+            <!-- Chapter 9: Όψεις (Views) -->
+            <h1 style="border-top: 4px solid var(--primary); padding-top: 2rem; margin-top: 4rem;">Όψεις (Views)</h1>
+            <h2>9.1 CREATE VIEW</h2>
+            <div class="code-example"><code>CREATE VIEW european_cities AS
+SELECT * FROM City
+WHERE CountryCode IN (
+    SELECT Code FROM Country WHERE Continent = 'Europe'
+);</code></div>
+            <h2>9.2 Χρήση Views</h2>
+            <div class="code-example"><code>SELECT * FROM european_cities;</code></div>
+            <h2>9.3 DROP VIEW</h2>
+            <div class="code-example"><code>DROP VIEW european_cities;</code></div>
+
+        </div>
+
+        <!-- Chapter Navigation -->
+        <div class="chapter-nav">
+            <a href="index.html#chapters" class="nav-button">
+                ← Όλα τα Κεφάλαια
+            </a>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Εισαγωγή στην SQL</h3>
+                    <p>Υλικό βασισμένο σε σημειώσεις ΔΠΘ</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Navigation</h4>
+                    <ul>
+                        <li><a href="index.html">Αρχική</a></li>
+                        <li><a href="index.html#chapters">Κεφάλαια</a></li>
+                        <li><a href="index.html#about">Σχετικά</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 SQL Education Platform</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
