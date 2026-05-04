@@ -117,21 +117,7 @@ rasa run --enable-api --cors "*" --port 5005
 - Rasa 3.x
 - (Δείτε requirements.txt για πλήρη λίστα)
 
-## 🌐 Deployment Options
-
-### Frontend (Ιστοσελίδα):
-- **Netlify** ⭐ Συνιστάται
-- **Vercel**
-- **GitHub Pages**
-- **Traditional Web Hosting** (cPanel/FTP)
-
-### Backend (Rasa):
-- **Heroku** (Free tier available)
-- **DigitalOcean**
-- **AWS/Google Cloud**
-- **Railway**
-- **Docker**
-
+  
 ## ⚙️ Configuration
 
 ### Σύνδεση Chatbot με Ιστοσελίδα
